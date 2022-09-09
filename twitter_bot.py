@@ -1,21 +1,25 @@
 import os
-import time
-import requests
-from bs4 import BeautifulSoup
-import discord
 
+import discord
+import secrets
 from dotenv import load_dotenv
 from discord.ext import commands
+import asyncio
 
-from verify import fetch_tweet
+from verify import fetch_conversation, is_unique
+
+def add_experience(user):
+    pass
+
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
+PASSW_LENGTH = 10
+WAIT_FOR_COMMENT = 30
 
 intents = discord.Intents.default()
 intents.message_content = True
-
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 client = discord.Client(intents=intents)
@@ -42,30 +46,31 @@ async def on_message(message):
         await message.channel.send(message.author.mention)
 
 @bot.command()
-async def me(ctx):
-    await ctx.send(f'You are {ctx.message.author}')
-    user = await bot.fetch_user(ctx.message.author.id)
-
-@bot.command()
-async def you(ctx):
-    response = "I'm a catgirl, p-pet me. Meow :3"
-    await ctx.send(response)
-
-@bot.command()
 async def verify(ctx):
+    url = ctx.message.content.split()[2]
+    content_code = ctx.message.content.split()[1]
+    tweet_id = url.split("/")[-1]
+    tweet_author = url.split("/")[3]
 
-    await ctx.author.send("000000")
-    await ctx.send(ctx.message.content.split(" ")[-1])
-    tweet = await fetch_tweet(ctx.message.content.split(" ")[-1])
-    with open("tweet.html", "w") as f:
-        f.write(tweet)
+    if not is_unique(tweet_author, content_code):
+        await ctx.author.send(f"You have already claimed your reward for the following code: {content_code}")
+        return
 
+    otp = secrets.token_urlsafe(PASSW_LENGTH)
+    await ctx.author.send(f"Comment your tweet with the following code within the next 30 seconds")
+    await ctx.author.send(f"code: {otp}")
+    await asyncio.sleep(WAIT_FOR_COMMENT)
+
+    if not await verify_tweet(tweet_id, tweet_author, otp):
+        await ctx.author.send(f"You commented with the wrong code!")
+        return
+
+    add_experience(ctx.author)
+    await ctx.author.send(f"Tweet has been verified!")
 
 # !verify https://twitter.com/2Fast_4Love/status/1567815691293659136
 
-
 bot.run(TOKEN)
-# client.run(TOKEN)
 
 
 

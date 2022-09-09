@@ -1,41 +1,59 @@
-
-import aiohttp
-import asyncio
 from dotenv import load_dotenv
-import requests
+import os
+import aiohttp
+import json
+from dotenv import load_dotenv
 
-async def fetch_tweet_replies(tweet_id):
 
-    async with aiohttp.ClientSession() as session:
+
+load_dotenv()
+BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
+HEADER = {"Authorization": f"Bearer {BEARER_TOKEN}"}
+
+
+async def conversation_by_tweet(tweet_id):
+    url = f"https://api.twitter.com/2/tweets/search/recent?query=conversation_id:{tweet_id}"
+    async with aiohttp.ClientSession(headers=HEADER) as session:
         async with session.get(url) as response:
-
-            print("Status:", response.status)
-            print("Content-type:", response.headers['content-type'])
-
-            html = await response.text()
-            return html
+            return await json.loads(response.text)["data"]
 
 
-if __name__ == "__main__":
-    import tweepy
-    import os
-    import aiohttp
-    import asyncio
-    from dotenv import load_dotenv
-    import requests
+async def user_id_by_author(author):
+    url = f"https://api.twitter.com/2/users/by/username/{author}"
+    async with aiohttp.ClientSession(headers=HEADER) as session:
+        async with session.get(url) as response:
+            return await json.loads(response.text)["data"]["id"]
 
 
-    load_dotenv()
-    BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
-    client = tweepy.Client(BEARER_TOKEN)
-    tweet_id = 1567815691293659136
+async def recent_tweets_by_user(user_id):
+    url = f"https://api.twitter.com/2/users/{user_id}/tweets"
+    async with aiohttp.ClientSession(headers=HEADER) as session:
+        async with session.get(url) as response:
+            return {
+                tweet["id"]: tweet["text"]
+                async for tweet in await json.loads(response.text)["data"]
+            }
 
 
-    header = {"Authorization": f"Bearer {BEARER_TOKEN}"}
-    import json
+async def conversation_by_tweet(tweet_id):
+    url = f"https://api.twitter.com/2/tweets/search/recent?query=conversation_id:{tweet_id}"
+    async with aiohttp.ClientSession(headers=HEADER) as session:
+        async with session.get(url) as response:
+            return {
+                tweet["id"]: tweet["text"]
+                async for tweet in await json.loads(response.text)["data"]
+            }
 
-    cid = json.loads(requests.get(f"https://api.twitter.com/2/tweets?ids={tweet_id}&tweet.fields=conversation_id", headers=header).text)["data"][0]["conversation_id"]
-    replies = json.loads(requests.get(f"https://api.twitter.com/2/tweets/search/recent?query=conversation_id:{cid}", headers=header).text)["data"]
-    for reply in replies:
-        if reply["text"] == "lallero":
-            print("verified")
+
+async def _verify(conversation, recent_tweets, otp):
+    for id_, text in conversation.items():
+        if text == otp and id_ in recent_tweets.keys():
+            return True
+
+
+async def verify_tweet(tweet_id, tweet_author, otp):
+    uid = await user_id_by_author(tweet_author)
+    recent_tweets = await recent_tweets_by_user(uid)
+    convo = await conversation_by_tweet(tweet_id)
+    return await _verify(convo, recent_tweets, otp)
+
