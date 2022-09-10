@@ -30,10 +30,9 @@ async def recent_tweets_by_user(user_id):
     url = f"https://api.twitter.com/2/users/{user_id}/tweets"
     async with aiohttp.ClientSession(headers=HEADER) as session:
         async with session.get(url) as response:
-            data = await response.text()
             return {
                 tweet["id"]: tweet["text"]
-                for tweet in json.loads(data)["data"]
+                for tweet in json.loads(await response.text())["data"]
             }
 
 
@@ -41,11 +40,12 @@ async def conversation_by_tweet(tweet_id):
     url = f"https://api.twitter.com/2/tweets/search/recent?query=conversation_id:{tweet_id}"
     async with aiohttp.ClientSession(headers=HEADER) as session:
         async with session.get(url) as response:
-            data = await response.text()
-            return {
-                tweet["id"]: tweet["text"]
-                for tweet in json.loads(data)["data"]
-            }
+            tweets = json.loads(await response.text()).get("data")
+            if tweets:
+                return {
+                    tweet["id"]: tweet["text"]
+                    for tweet in tweets
+                }
 
 
 async def _verify(conversation, recent_tweets, otp):
@@ -58,5 +58,6 @@ async def verify_tweet(tweet_id, tweet_author, otp):
     uid = await user_id_by_author(tweet_author)
     recent_tweets = await recent_tweets_by_user(uid)
     convo = await conversation_by_tweet(tweet_id)
-    return await _verify(convo, recent_tweets, otp)
+    if convo:
+        return await _verify(convo, recent_tweets, otp)
 
