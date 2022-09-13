@@ -13,8 +13,18 @@ ssh -i ~/ema-linux.pem ec2-user@ec2-3-92-225-108.compute-1.amazonaws.com
 scp -i ~/ema-linux.pem ~/dev/red-panda-nft/discord/* ec2-user@ec2-3-92-225-108.compute-1.amazonaws.com:~/discord/.
 python -m pip install -r requiremets.txt
 
-    source discord_venv/bin/activate
+source discord_venv/bin/activate
 
 ```
 
 Setting up PostgreSQL with Python 3 https://www.fullstackpython.com/blog/postgresql-python-3-psycopg2-ubuntu-1604.html
+
+## DB
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
+
+```
+sudo -i -u postgres createuser --superuser akajukus
+sudo -i -u postgres createdb discord
+
+```

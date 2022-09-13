@@ -10,10 +10,11 @@ make -j $(nproc)
 sudo make altinstall
 
 cd
-sudo yum install python3-pip
+sudo yum install python3-pip locate
 sudo yum install postgresql libpq-dev postgresql-client postgresql-client-common
 mkdir ~/discord && cd ~/discord
 python3.10 -m venv discord_venv
 source discord_venv/bin/activate
+
 
 python -m pip install -r requirements.txt
