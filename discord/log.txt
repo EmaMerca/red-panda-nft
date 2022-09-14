@@ -12112,3 +12112,15 @@ TypeError: a bytes-like object is required, not 'str'
 22:34:00,372 asyncio DEBUG Using selector: EpollSelector
 22:34:00,374 discord.client INFO logging in using static token
 22:34:01,283 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 0cc6fc0ac93185ae4b37b78b9b49a6cf).
+22:36:15,941 root INFO Running Urban Planning
+22:36:15,942 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:36:15,944 asyncio DEBUG Using selector: EpollSelector
+22:36:15,944 discord.client INFO logging in using static token
+22:36:16,821 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 2d5d632334905e871c97bafd1af78c37).
+22:36:44,899 discord.ext.commands.bot ERROR Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "exo" is not found
+22:37:06,545 root INFO Running Urban Planning
+22:37:06,545 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:37:06,547 asyncio DEBUG Using selector: EpollSelector
+22:37:06,547 discord.client INFO logging in using static token
+22:37:07,527 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 5907a1576dfa16f2f62736bfd557931a).

@@ -32,17 +32,19 @@ class TwitterBot(commands.Bot):
 
 
 
-    @tasks.loop(hours=24)
+    @tasks.loop(hours=12)
     async def dump_db(self):
         async def unpack_records(records):
             data = []
             for el in records:
+                record = []
                 for k, v in el.items():
-                    data.append((k, v))
+                    record.append((k, v))
+                data.append(record)
             return data
 
         time = datetime.now()
-        fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}{time.hour}{time.minute}{time.second}.json"
+        fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}-{time.hour}.json"
         experience = await self.db.fetch('SELECT * FROM experience')
         promo = await self.db.fetch('SELECT * FROM promo')
         retweets = await self.db.fetch('SELECT * FROM retweets')
