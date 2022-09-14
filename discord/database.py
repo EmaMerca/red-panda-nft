@@ -28,7 +28,9 @@ class Database:
         async with self.pool.acquire() as connection:
             async with connection.transaction():
                 try:
-                    await connection.execute('CREATE TABLE experience(id serial PRIMARY KEY, uid bigint, exp float)')
+                    await connection.execute(
+                        'CREATE TABLE experience(id serial PRIMARY KEY, uid bigint, uname text, exp float)'
+                    )
                 except asyncpg.exceptions.DuplicateTableError:
                     pass
 
@@ -36,7 +38,9 @@ class Database:
         async with self.pool.acquire() as connection:
             async with connection.transaction():
                 try:
-                    await connection.execute('CREATE TABLE retweets(id serial PRIMARY KEY, uid bigint, promo text)')
+                    await connection.execute(
+                        'CREATE TABLE retweets(id serial PRIMARY KEY, uid bigint, promo text)'
+                    )
                 except asyncpg.exceptions.DuplicateTableError:
                     pass
 
@@ -44,11 +48,13 @@ class Database:
         async with self.pool.acquire() as connection:
             async with connection.transaction():
                 try:
-                    await connection.execute('CREATE TABLE promo(id serial PRIMARY KEY, url text, promo text)')
+                    await connection.execute(
+                        'CREATE TABLE promo(id serial PRIMARY KEY, url text, promo text)'
+                    )
                 except asyncpg.exceptions.DuplicateTableError:
                     pass
 
-    async def insert(self, query, *values):
+    async def write(self, query, *values):
         async with self.pool.acquire() as connection:
             async with connection.transaction():
                 await connection.execute(query, *values)
@@ -63,7 +69,6 @@ async def main():
     # as a "postgres" user.
 
     db = await create_database("akajukus", "diocane96", "discord")
-    print(a)
     conn = await asyncpg.connect('postgresql://akajukus:diocane96@localhost/discord')
     # Execute a statement to create a new table.
     # await conn.execute('''
@@ -97,4 +102,4 @@ async def main():
     # Close the connection.
     await conn.close()
 
-asyncio.get_event_loop().run_until_complete(main())
+# asyncio.get_event_loop().run_until_complete(main())
