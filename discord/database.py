@@ -39,7 +39,7 @@ class Database:
             async with connection.transaction():
                 try:
                     await connection.execute(
-                        'CREATE TABLE retweets(id serial PRIMARY KEY, uid bigint, promo text)'
+                        'CREATE TABLE retweets(id serial PRIMARY KEY, uid bigint, code text)'
                     )
                 except asyncpg.exceptions.DuplicateTableError:
                     pass
@@ -49,7 +49,7 @@ class Database:
             async with connection.transaction():
                 try:
                     await connection.execute(
-                        'CREATE TABLE promo(id serial PRIMARY KEY, url text, promo text)'
+                        'CREATE TABLE promo(id serial PRIMARY KEY, url text, code text)'
                     )
                 except asyncpg.exceptions.DuplicateTableError:
                     pass
@@ -58,11 +58,12 @@ class Database:
         async with self.pool.acquire() as connection:
             async with connection.transaction():
                 await connection.execute(query, *values)
+                return
 
     async def fetch(self, query, *values):
         async with self.pool.acquire() as connection:
             async with connection.transaction():
-                await connection.fetch(query, *values)
+                return await connection.fetch(query, *values)
 
 async def main():
     # Establish a connection to an existing database named "test"

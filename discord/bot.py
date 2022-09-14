@@ -19,7 +19,7 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 PASSW_LENGTH = 16
-WAIT_FOR_COMMENT = 1
+WAIT_FOR_COMMENT = 60
 
 
 class TwitterBot(commands.Bot):
@@ -51,12 +51,12 @@ class TwitterBot(commands.Bot):
 
     async def _promo_claimed(self, author_id, promo_code):
         promo_by_author = await self.db.fetch('SELECT * FROM retweets WHERE UID = $1', author_id)
-        if promo_by_author and promo_code in [el.get("promo") for el in promo_by_author]:
+        if promo_by_author and promo_code in [el.get("code") for el in promo_by_author]:
             return True
 
 
     async def update_promo(self, author_id, promo_code):
-        await self.db.write('INSERT INTO retweets(uid, promo) VALUES($1, $2)', author_id, promo_code)
+        await self.db.write('INSERT INTO retweets(uid, code) VALUES($1, $2)', author_id, promo_code)
 
     async def add_exp(self, author_id, author_uname):
         exp = await self.db.fetch('SELECT * FROM experience WHERE UID = $1', author_id)
@@ -91,7 +91,7 @@ class TwitterBot(commands.Bot):
             new_code = int(self.used_codes[-1]) + 1 if len(self.used_codes) > 0 else 0
             self.tweet_to_promo_code[url] = PROMO_PREFIX + str(new_code)
             self.used_codes.append(new_code)
-            await self.db.write('INSERT INTO promo(url, promo) VALUES($1, $2)', url, self.tweet_to_promo_code[url])
+            await self.db.write('INSERT INTO promo(url, code) VALUES($1, $2)', url, self.tweet_to_promo_code[url])
             await ctx.author.send(f"Promo code: {self.tweet_to_promo_code[url]}")
 
         @self.command(name="all-exp", pass_context=True)
@@ -128,7 +128,7 @@ class TwitterBot(commands.Bot):
                 await ctx.author.send(f"You have already claimed your reward for the following code: {promo_code}")
                 return
 
-            otp = "lallero" #await self._generate_otp()
+            otp = await self._generate_otp()
             await ctx.author.send(f"Comment your tweet with the following code within the next {WAIT_FOR_COMMENT} seconds.\nCode: {otp}")
             await asyncio.sleep(WAIT_FOR_COMMENT)
 
