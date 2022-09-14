@@ -10727,3 +10727,1388 @@ discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Und
 21:17:16,319 asyncio DEBUG Using selector: EpollSelector
 21:17:16,319 discord.client INFO logging in using static token
 21:17:17,224 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 8590a4bfb2e244e804f1ac170e06b89f).
+22:08:50,231 root INFO Running Urban Planning
+22:08:50,231 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:08:50,232 asyncio DEBUG Using selector: EpollSelector
+22:08:50,233 discord.client INFO logging in using static token
+22:08:51,256 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 366b06108685c28dd7701b136f02334d).
+22:11:48,985 root INFO Running Urban Planning
+22:11:48,985 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:11:48,986 asyncio DEBUG Using selector: EpollSelector
+22:11:48,987 discord.client INFO logging in using static token
+22:11:49,843 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 3b17ca01609d00a613bc0982f79ed9c1).
+22:13:58,137 root INFO Running Urban Planning
+22:13:58,137 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:13:58,138 asyncio DEBUG Using selector: EpollSelector
+22:13:58,138 discord.client INFO logging in using static token
+22:13:59,31 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 610e89369931e941f5c53cf871835306).
+22:14:35,628 root INFO Running Urban Planning
+22:14:35,628 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:14:35,630 asyncio DEBUG Using selector: EpollSelector
+22:14:35,630 discord.client INFO logging in using static token
+22:14:36,492 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 6cb97436cc41f4f380f6c2073516bfa4).
+22:16:25,254 root INFO Running Urban Planning
+22:16:25,255 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:16:25,257 asyncio DEBUG Using selector: EpollSelector
+22:16:25,257 discord.client INFO logging in using static token
+22:16:26,195 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: cbe681275cd780fefd89d15a8f3afd29).
+22:19:59,283 root INFO Running Urban Planning
+22:19:59,284 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:19:59,285 asyncio DEBUG Using selector: EpollSelector
+22:19:59,285 discord.client INFO logging in using static token
+22:20:00,185 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 61d3591fa6f3abffac382fd6a37dd087).
+22:20:02,678 discord.ext.tasks ERROR Unhandled exception in internal background task 'dump_db'.
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 37, in dump_db
+    fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}{time.seconds}.pkl"
+AttributeError: 'datetime.datetime' object has no attribute 'seconds'
+22:20:09,916 asyncio ERROR Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<Loop._loop() done, defined at /home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=AttributeError("'datetime.datetime' object has no attribute 'seconds'")>
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 264, in _loop
+    raise exc
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 37, in dump_db
+    fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}{time.seconds}.pkl"
+AttributeError: 'datetime.datetime' object has no attribute 'seconds'
+22:21:20,872 root INFO Running Urban Planning
+22:21:20,872 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:21:20,874 asyncio DEBUG Using selector: EpollSelector
+22:21:20,874 discord.client INFO logging in using static token
+22:21:21,770 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 54e91f7d34a9f3a09eaceba4fd7d4f4a).
+22:21:24,227 discord.ext.tasks ERROR Unhandled exception in internal background task 'dump_db'.
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 47, in dump_db
+    pickle.dump(data, f)
+TypeError: cannot pickle 'asyncpg.Record' object
+22:21:34,983 asyncio ERROR Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<Loop._loop() done, defined at /home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=TypeError("cannot pickle 'asyncpg.Record' object")>
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 264, in _loop
+    raise exc
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 47, in dump_db
+    pickle.dump(data, f)
+TypeError: cannot pickle 'asyncpg.Record' object
+22:23:30,611 root INFO Running Urban Planning
+22:23:30,612 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:23:30,613 asyncio DEBUG Using selector: EpollSelector
+22:23:30,614 discord.client INFO logging in using static token
+22:23:31,545 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 96acc924de68eb4b186d482b6deee019).
+22:23:34,16 discord.ext.tasks ERROR Unhandled exception in internal background task 'dump_db'.
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in dump_db
+    "experience": {key: val for key, val in experience.items()},
+AttributeError: 'list' object has no attribute 'items'
+22:23:40,695 asyncio ERROR Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<Loop._loop() done, defined at /home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=AttributeError("'list' object has no attribute 'items'")>
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 264, in _loop
+    raise exc
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in dump_db
+    "experience": {key: val for key, val in experience.items()},
+AttributeError: 'list' object has no attribute 'items'
+22:24:54,186 root INFO Running Urban Planning
+22:24:54,186 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:24:54,188 asyncio DEBUG Using selector: EpollSelector
+22:24:54,188 discord.client INFO logging in using static token
+22:24:55,42 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: d7557e7fcf06419296b45fb9886370fa).
+22:24:57,521 discord.ext.tasks ERROR Unhandled exception in internal background task 'dump_db'.
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in dump_db
+    "experience": {key: val for entry in experience for key, val in entry},
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in <dictcomp>
+    "experience": {key: val for entry in experience for key, val in entry},
+TypeError: cannot unpack non-iterable int object
+22:25:04,854 asyncio ERROR Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<Loop._loop() done, defined at /home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py:200> exception=TypeError('cannot unpack non-iterable int object')>
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 264, in _loop
+    raise exc
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in dump_db
+    "experience": {key: val for entry in experience for key, val in entry},
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in <dictcomp>
+    "experience": {key: val for entry in experience for key, val in entry},
+TypeError: cannot unpack non-iterable int object
+22:25:15,70 root INFO Running Urban Planning
+22:25:15,71 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:25:15,74 asyncio DEBUG Using selector: EpollSelector
+22:25:15,76 discord.client INFO logging in using static token
+22:25:16,21 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 84b6abf121f361ed858f0b7714406ea5).
+22:25:25,198 discord.ext.tasks ERROR Unhandled exception in internal background task 'dump_db'.
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in dump_db
+    "experience": {key: val for entry in experience for key, val in entry},
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 42, in <dictcomp>
+    "experience": {key: val for entry in experience for key, val in entry},
+TypeError: cannot unpack non-iterable int object
+22:25:44,682 root INFO Running Urban Planning
+22:25:44,684 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:25:44,687 asyncio DEBUG Using selector: EpollSelector
+22:25:44,689 discord.client INFO logging in using static token
+22:25:45,598 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 1dde9bdd72f0a80edb3c5dd20b5da143).
+22:26:36,596 discord.gateway WARNING Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:26:46,600 discord.gateway WARNING Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:26:56,605 discord.gateway WARNING Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:27:06,610 discord.gateway WARNING Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:27:16,613 discord.gateway WARNING Shard ID None heartbeat blocked for more than 50 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:27:26,616 discord.gateway WARNING Shard ID None heartbeat blocked for more than 60 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:27:36,621 discord.gateway WARNING Shard ID None heartbeat blocked for more than 70 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:27:46,627 discord.gateway WARNING Shard ID None heartbeat blocked for more than 80 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:27:56,631 discord.gateway WARNING Shard ID None heartbeat blocked for more than 90 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:28:06,633 discord.gateway WARNING Shard ID None heartbeat blocked for more than 100 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:28:16,638 discord.gateway WARNING Shard ID None heartbeat blocked for more than 110 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:28:26,641 discord.gateway WARNING Shard ID None heartbeat blocked for more than 120 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:28:36,643 discord.gateway WARNING Shard ID None heartbeat blocked for more than 130 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:28:46,646 discord.gateway WARNING Shard ID None heartbeat blocked for more than 140 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:28:56,651 discord.gateway WARNING Shard ID None heartbeat blocked for more than 150 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:29:06,656 discord.gateway WARNING Shard ID None heartbeat blocked for more than 160 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:29:16,661 discord.gateway WARNING Shard ID None heartbeat blocked for more than 170 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:29:26,663 discord.gateway WARNING Shard ID None heartbeat blocked for more than 180 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:29:36,667 discord.gateway WARNING Shard ID None heartbeat blocked for more than 190 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:29:46,671 discord.gateway WARNING Shard ID None heartbeat blocked for more than 200 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:29:56,674 discord.gateway WARNING Shard ID None heartbeat blocked for more than 210 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:30:06,675 discord.gateway WARNING Shard ID None heartbeat blocked for more than 220 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:30:16,677 discord.gateway WARNING Shard ID None heartbeat blocked for more than 230 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:30:26,679 discord.gateway WARNING Shard ID None heartbeat blocked for more than 240 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:30:36,682 discord.gateway WARNING Shard ID None heartbeat blocked for more than 250 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:30:46,684 discord.gateway WARNING Shard ID None heartbeat blocked for more than 260 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:30:56,687 discord.gateway WARNING Shard ID None heartbeat blocked for more than 270 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:31:06,691 discord.gateway WARNING Shard ID None heartbeat blocked for more than 280 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:31:16,695 discord.gateway WARNING Shard ID None heartbeat blocked for more than 290 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:31:26,698 discord.gateway WARNING Shard ID None heartbeat blocked for more than 300 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:31:36,701 discord.gateway WARNING Shard ID None heartbeat blocked for more than 310 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:31:46,702 discord.gateway WARNING Shard ID None heartbeat blocked for more than 320 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:31:56,704 discord.gateway WARNING Shard ID None heartbeat blocked for more than 330 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:32:06,708 discord.gateway WARNING Shard ID None heartbeat blocked for more than 340 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    retweets = await self.db.fetch('SELECT * FROM retweets')
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:32:16,712 discord.gateway WARNING Shard ID None heartbeat blocked for more than 350 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 28, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 40, in dump_db
+    for k, v in el.items():
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+22:32:20,765 root INFO Running Urban Planning
+22:32:20,766 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:32:20,770 asyncio DEBUG Using selector: EpollSelector
+22:32:20,771 discord.client INFO logging in using static token
+22:32:21,647 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 8025e69fc2527b2d0b8d61ad6d38e911).
+22:32:24,545 discord.ext.tasks ERROR Unhandled exception in internal background task 'dump_db'.
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 56, in dump_db
+    json.dump(data, f)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/json/__init__.py", line 180, in dump
+    fp.write(chunk)
+TypeError: a bytes-like object is required, not 'str'
+22:32:41,140 root INFO Running Urban Planning
+22:32:41,141 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:32:41,145 asyncio DEBUG Using selector: EpollSelector
+22:32:41,146 discord.client INFO logging in using static token
+22:32:42,41 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 4655e70303f211ab61e14c508ecc660a).
+22:34:00,368 root INFO Running Urban Planning
+22:34:00,369 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+22:34:00,372 asyncio DEBUG Using selector: EpollSelector
+22:34:00,374 discord.client INFO logging in using static token
+22:34:01,283 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 0cc6fc0ac93185ae4b37b78b9b49a6cf).

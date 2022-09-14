@@ -1,10 +1,11 @@
 import os
 import secrets
 from dotenv import load_dotenv
-from discord.ext import commands
+from discord.ext import commands, tasks
 import asyncio
 import hashlib
-
+import json
+from datetime import datetime
 from verify import verify_tweet
 
 PROMO_PREFIX = "AKA"
@@ -30,6 +31,31 @@ class TwitterBot(commands.Bot):
         self.db = database
 
 
+
+    @tasks.loop(hours=24)
+    async def dump_db(self):
+        async def unpack_records(records):
+            data = []
+            for el in records:
+                for k, v in el.items():
+                    data.append((k, v))
+            return data
+
+        time = datetime.now()
+        fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}{time.hour}{time.minute}{time.second}.json"
+        experience = await self.db.fetch('SELECT * FROM experience')
+        promo = await self.db.fetch('SELECT * FROM promo')
+        retweets = await self.db.fetch('SELECT * FROM retweets')
+
+        data = {
+            "experience": await unpack_records(experience),
+            "promo": await unpack_records(promo),
+            "retweets": await unpack_records(retweets),
+        }
+        with open(fname, "w") as f:
+            json.dump(data, f)
+
+
     async def _fetch_promos(self):
         promos = await self.db.fetch('SELECT * FROM promo')
         self.tweet_to_promo_code = {el.get("url"): el.get("code") for el in promos} if promos else {}
@@ -40,6 +66,7 @@ class TwitterBot(commands.Bot):
     async def on_ready(self):
         await self.db._init()
         await self._fetch_promos()
+        self.dump_db.start()
         print(self._on_ready)
 
     async def _generate_otp(self):

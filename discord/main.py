@@ -3,7 +3,7 @@ import discord
 import asyncio
 from bot import TwitterBot, TOKEN
 from database import Database, create_database
-# TODO: ROLES, exp con invit, ok **verifica unique per twitter verification**, ok **exp in base a twiyyer**
+# TODO: dump db every day, ROLES, exp con invit, ok **verifica unique per twitter verification**, ok **exp in base a twiyyer**
 # twitte +1xp
 # invite +1xp
 

@@ -3,5 +3,6 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo yum 
 sudo yum update
 sudo yum -y install postgresql
 
-    sudo -i -u postgres psql -c "CREATE USER akajukus WITH PASSWORD 'diocane96'; CREATE DATABASE discord;"
+sudo -i -u postgres psql -c "CREATE USER akajukus WITH PASSWORD 'diocane96'; CREATE DATABASE discord;"
 
+sudo -i -u postgres pg_dump discord > discord.sql
