@@ -1,9 +1,9 @@
 import os
 import secrets
 from dotenv import load_dotenv
+import discord
 from discord.ext import commands, tasks
 import asyncio
-import hashlib
 import json
 from datetime import datetime
 from verify import verify_tweet
@@ -15,6 +15,9 @@ ROLES = {
     "dev": 1004495124451053612,
 }
 
+EXP_ROLES = {
+
+}
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -22,7 +25,9 @@ GUILD = os.getenv('DISCORD_GUILD')
 PASSW_LENGTH = 16
 WAIT_FOR_COMMENT = 60
 
-
+ALLOWED_CHANNELS = {
+    1017360549425709097: 'twitter-verification'
+}
 class TwitterBot(commands.Bot):
     def __init__(self, command_prefix, intents, database):
         commands.Bot.__init__(self, command_prefix=command_prefix, intents=intents)
@@ -32,7 +37,7 @@ class TwitterBot(commands.Bot):
 
 
 
-    @tasks.loop(hours=12)
+    @tasks.loop(hours=24)
     async def dump_db(self):
         async def unpack_records(records):
             data = []
@@ -97,14 +102,30 @@ class TwitterBot(commands.Bot):
     async def _is_promo_allowed(self, promo_code):
         return promo_code in self.tweet_to_promo_code.values()
 
-    async def hash(self, text):
-        return hashlib.sha256(f"{text}".encode()).hexdigest()
+
+    async def is_channel_allowed(self, ctx):
+        def format_output():
+            return '\n'.join(list(ALLOWED_CHANNELS.values()))
+
+        if ctx.channel.id in ALLOWED_CHANNELS:
+            return True
+
+        command = ctx.message.content.split()[0]
+        await ctx.author.send(f"The command {command} can only be used in the following channels:\n {format_output()}")
+        return False
+
 
     def add_commands(self):
         @self.command(name="promo", pass_context=True)
         async def promo(ctx):
-            if not await self._is_admin(ctx):
+            if ctx.message.author == ctx.client.user:
                 return
+            if not  await self.is_channel_allowed(ctx):
+                return
+            if not await self._is_admin(ctx):
+                await ctx.author.send("Admin only command!")
+                return
+
             try:
                 url = ctx.message.content.split()[1]
             except IndexError:
@@ -123,15 +144,33 @@ class TwitterBot(commands.Bot):
             await self.db.write('INSERT INTO promo(url, code) VALUES($1, $2)', url, self.tweet_to_promo_code[url])
             await ctx.author.send(f"Promo code: {self.tweet_to_promo_code[url]}")
 
-        @self.command(name="all-exp", pass_context=True)
-        async def all_exp(ctx):
-            if not await self._is_admin(ctx):
+        @self.command(name="leaderboard", pass_context=True)
+        async def leaderboard(ctx):
+            if ctx.message.author == ctx.client.user:
                 return
-            await ctx.author.send(self.exp)
+            def format_output(experience):
+                sorted_exps = sorted(
+                    [[el['uname'], el['exp']] for el in experience],
+                    key=lambda x: x[1],
+                    reverse=True
+                )
+                return "\n".join([f"{el[0]}: {el[1]}" for el in sorted_exps])
+
+
+            if not await self.is_channel_allowed(ctx):
+                return
+
+            experience = await self.db.fetch('SELECT * FROM experience')
+            await ctx.channel.send(format_output(experience))
 
         @self.command(name="exp", pass_context=True)
         async def exp(ctx):
+            if ctx.message.author == ctx.client.user:
+                return
+            if not await self.is_channel_allowed(ctx):
+                return
             exp = await self.db.fetch('SELECT * FROM experience WHERE UID = $1', ctx.author.id)
+
             if exp:
                 await ctx.author.send(f"You have {exp[0].get('exp')} exp")
             else:
@@ -139,6 +178,10 @@ class TwitterBot(commands.Bot):
 
         @self.command(name="verify", pass_context=True)
         async def verify(ctx):
+            if ctx.message.author == ctx.client.user:
+                return
+            if not await self.is_channel_allowed(ctx):
+                return
             try:
                 url = ctx.message.content.split()[1]
                 promo_code = ctx.message.content.split()[2]
