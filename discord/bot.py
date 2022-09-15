@@ -1,13 +1,14 @@
+import math
 import os
 import secrets
 from dotenv import load_dotenv
-import discord
+from discord.utils import get
 from discord.ext import commands, tasks
 import asyncio
 import json
 from datetime import datetime
 from verify import verify_tweet
-
+import math
 PROMO_PREFIX = "AKA"
 
 ROLES = {
@@ -16,7 +17,11 @@ ROLES = {
 }
 
 EXP_ROLES = {
-
+    "role1": [10, 19],
+    "role2": [20, 29],
+    "role3": [30, 39],
+    "role4": [40, 49],
+    "role5": [50, math.inf]
 }
 
 load_dotenv()
@@ -28,13 +33,13 @@ WAIT_FOR_COMMENT = 60
 ALLOWED_CHANNELS = {
     1017360549425709097: 'twitter-verification'
 }
+
 class TwitterBot(commands.Bot):
     def __init__(self, command_prefix, intents, database):
         commands.Bot.__init__(self, command_prefix=command_prefix, intents=intents)
         self._on_ready = "[INFO] Bot now online"
         self.add_commands()
         self.db = database
-
 
 
     @tasks.loop(hours=24)
@@ -115,12 +120,36 @@ class TwitterBot(commands.Bot):
         return False
 
 
+    async def fetch_exp_and_levelup(self, ctx):
+        tweet_experience = [[el["uid"], int(el["exp"]), el["uname"]] for el in
+                            await self.db.fetch('SELECT * FROM experience')]
+        invites_by_user = [[i.inviter.id, i.uses, i.inviter.name] for i in await ctx.guild.invites() if i.uses > 0]
+
+        exp_by_uname = {}
+        exp_by_uid = {}
+        for uid, exp, uname in tweet_experience + invites_by_user:
+            if uname not in exp_by_uname:
+                exp_by_uname[uname] = 0
+            exp_by_uname[uname] += exp
+
+            if uid not in exp_by_uid:
+                exp_by_uid[uid] = 0
+            exp_by_uid[uid] += exp
+
+        for user in ctx.guild.members:
+            if user and user.id in exp_by_uid:
+                for role_name, minmax in EXP_ROLES.items():
+                    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+                        role = get(ctx.guild.roles, name=role_name)
+                        await user.add_roles(role)
+
+        return exp_by_uname, exp_by_uid
+
     def add_commands(self):
         @self.command(name="promo", pass_context=True)
         async def promo(ctx):
-            if ctx.message.author == ctx.client.user:
-                return
-            if not  await self.is_channel_allowed(ctx):
+
+            if not await self.is_channel_allowed(ctx):
                 return
             if not await self._is_admin(ctx):
                 await ctx.author.send("Admin only command!")
@@ -144,42 +173,28 @@ class TwitterBot(commands.Bot):
             await self.db.write('INSERT INTO promo(url, code) VALUES($1, $2)', url, self.tweet_to_promo_code[url])
             await ctx.author.send(f"Promo code: {self.tweet_to_promo_code[url]}")
 
+
+
         @self.command(name="leaderboard", pass_context=True)
         async def leaderboard(ctx):
-            if ctx.message.author == ctx.client.user:
-                return
             def format_output(experience):
                 sorted_exps = sorted(
-                    [[el['uname'], el['exp']] for el in experience],
+                    [[k, v] for k, v in experience.items()],
                     key=lambda x: x[1],
                     reverse=True
                 )
-                return "\n".join([f"{el[0]}: {el[1]}" for el in sorted_exps])
-
+                return "\n".join([f"{el[0]}: {el[1]}exp" for el in sorted_exps])
 
             if not await self.is_channel_allowed(ctx):
                 return
 
-            experience = await self.db.fetch('SELECT * FROM experience')
-            await ctx.channel.send(format_output(experience))
+            exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+            await ctx.channel.send(format_output(exp_by_uname))
 
-        @self.command(name="exp", pass_context=True)
-        async def exp(ctx):
-            if ctx.message.author == ctx.client.user:
-                return
-            if not await self.is_channel_allowed(ctx):
-                return
-            exp = await self.db.fetch('SELECT * FROM experience WHERE UID = $1', ctx.author.id)
-
-            if exp:
-                await ctx.author.send(f"You have {exp[0].get('exp')} exp")
-            else:
-                await ctx.author.send("You have 0 exp")
 
         @self.command(name="verify", pass_context=True)
         async def verify(ctx):
-            if ctx.message.author == ctx.client.user:
-                return
+
             if not await self.is_channel_allowed(ctx):
                 return
             try:
@@ -210,6 +225,7 @@ class TwitterBot(commands.Bot):
                 return
 
             await self.add_exp(author_id, ctx.author.name)
+
             await self.update_promo(author_id, promo_code)
             await ctx.author.send(f"Tweet has been verified!")
 

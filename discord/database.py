@@ -54,6 +54,7 @@ class Database:
                 except asyncpg.exceptions.DuplicateTableError:
                     pass
 
+
     async def write(self, query, *values):
         async with self.pool.acquire() as connection:
             async with connection.transaction():
