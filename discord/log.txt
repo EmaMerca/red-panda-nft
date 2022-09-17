@@ -20254,3 +20254,2294 @@ Loop thread traceback (most recent call last):
   File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
     time.sleep(0.01)
 
+12:13:57,868 root INFO Running Urban Planning
+12:13:57,870 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:13:57,874 asyncio DEBUG Using selector: EpollSelector
+12:13:57,875 discord.client INFO logging in using static token
+12:13:58,840 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: b504436486a65adf093dc4419a921899).
+12:15:01,631 root INFO Running Urban Planning
+12:15:01,632 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:15:01,638 asyncio DEBUG Using selector: EpollSelector
+12:15:01,640 discord.client INFO logging in using static token
+12:15:02,657 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 3b08c7d3ac4789ae065457c0cac3e5b0).
+12:15:40,377 root INFO Running Urban Planning
+12:15:40,378 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:15:40,384 asyncio DEBUG Using selector: EpollSelector
+12:15:40,386 discord.client INFO logging in using static token
+12:15:41,283 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 9df362740c62a7e63af927ee24f22c76).
+12:16:04,321 root INFO Running Urban Planning
+12:16:04,322 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:16:04,325 asyncio DEBUG Using selector: EpollSelector
+12:16:04,327 discord.client INFO logging in using static token
+12:16:05,203 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 00403e5079d2df032fabcfe81c5a2774).
+12:16:31,51 discord.ext.commands.bot ERROR Ignoring exception in command leaderboard
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 191, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 144, in fetch_exp_and_levelup
+    await user.add_roles(role)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/member.py", line 1014, in add_roles
+    await req(guild_id, user_id, role.id, reason=reason)
+AttributeError: 'NoneType' object has no attribute 'id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'NoneType' object has no attribute 'id'
+12:17:01,862 root INFO Running Urban Planning
+12:17:01,865 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:17:01,873 asyncio DEBUG Using selector: EpollSelector
+12:17:01,875 discord.client INFO logging in using static token
+12:17:02,888 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 9966daa3d79334262e3d19e9548b696f).
+12:17:04,379 discord.ext.commands.bot ERROR Ignoring exception in command leaderboard
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 191, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 125, in fetch_exp_and_levelup
+    await self.db.fetch('SELECT * FROM experience')]
+  File "/home/ema/dev/red-panda-nft/discord/database.py", line 65, in fetch
+    async with self.pool.acquire() as connection:
+AttributeError: 'Database' object has no attribute 'pool'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'Database' object has no attribute 'pool'
+12:17:25,656 root INFO Running Urban Planning
+12:17:25,657 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:17:25,660 asyncio DEBUG Using selector: EpollSelector
+12:17:25,661 discord.client INFO logging in using static token
+12:17:26,590 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: f3b01192b3bd95f1dc3482ae88dd6197).
+12:17:49,657 root INFO Running Urban Planning
+12:17:49,658 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:17:49,663 asyncio DEBUG Using selector: EpollSelector
+12:17:49,666 discord.client INFO logging in using static token
+12:17:50,514 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 9e6c6e7368bb64ad5a17308ac9f09f68).
+12:17:58,37 discord.ext.commands.bot ERROR Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "exp" is not found
+12:19:13,278 root INFO Running Urban Planning
+12:19:13,279 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:19:13,283 asyncio DEBUG Using selector: EpollSelector
+12:19:13,284 discord.client INFO logging in using static token
+12:19:14,163 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 8bd9f56ecf0f22ca40d3f0cc428e385d).
+12:19:39,8 root INFO Running Urban Planning
+12:19:39,9 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:19:39,13 asyncio DEBUG Using selector: EpollSelector
+12:19:39,14 discord.client INFO logging in using static token
+12:19:39,942 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: abe62b311826bd6f6cfbbc6f0c824e3a).
+12:19:45,684 root INFO Running Urban Planning
+12:19:45,686 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:19:45,710 asyncio DEBUG Using selector: EpollSelector
+12:19:45,715 discord.client INFO logging in using static token
+12:19:46,659 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 3e83d240b36e59d1066cbb1ef4894b06).
+12:20:07,923 root INFO Running Urban Planning
+12:20:07,924 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:20:07,928 asyncio DEBUG Using selector: EpollSelector
+12:20:07,929 discord.client INFO logging in using static token
+12:20:08,856 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: df0682aa4fc6d06b68d201f514b5aedf).
+12:21:03,360 discord.ext.commands.bot ERROR Ignoring exception in command leaderboard
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 191, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 144, in fetch_exp_and_levelup
+    await user.add_roles(role)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/member.py", line 1014, in add_roles
+    await req(guild_id, user_id, role.id, reason=reason)
+AttributeError: 'NoneType' object has no attribute 'id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'NoneType' object has no attribute 'id'
+12:21:03,384 discord.gateway WARNING Can't keep up, shard ID None websocket is 13.5s behind.
+12:21:35,472 root INFO Running Urban Planning
+12:21:35,472 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:21:35,473 asyncio DEBUG Using selector: EpollSelector
+12:21:35,473 discord.client INFO logging in using static token
+12:21:36,406 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 9802143f443212ccee2fdc91a4840624).
+12:31:10,305 root INFO Running Urban Planning
+12:31:10,306 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:31:10,307 asyncio DEBUG Using selector: EpollSelector
+12:31:10,307 discord.client INFO logging in using static token
+12:31:11,265 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 37850bcce4ae656091cfc075e17b3017).
+12:32:34,787 root INFO Running Urban Planning
+12:32:34,789 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:32:34,792 asyncio DEBUG Using selector: EpollSelector
+12:32:34,793 discord.client INFO logging in using static token
+12:32:35,706 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: b8d2681f8258afc3f40305383ea1fd7a).
+12:33:26,735 discord.gateway WARNING Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:33:36,741 discord.gateway WARNING Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:33:46,742 discord.gateway WARNING Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:33:56,745 discord.gateway WARNING Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:34:06,748 discord.gateway WARNING Shard ID None heartbeat blocked for more than 50 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:34:16,750 discord.gateway WARNING Shard ID None heartbeat blocked for more than 60 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:34:26,752 discord.gateway WARNING Shard ID None heartbeat blocked for more than 70 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:34:36,754 discord.gateway WARNING Shard ID None heartbeat blocked for more than 80 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    if not await self.is_channel_allowed(ctx):
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if user and user.id in exp_by_uid:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:34:46,756 discord.gateway WARNING Shard ID None heartbeat blocked for more than 90 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    if not await self.is_channel_allowed(ctx):
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if user and user.id in exp_by_uid:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:34:56,758 discord.gateway WARNING Shard ID None heartbeat blocked for more than 100 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 143, in fetch_exp_and_levelup
+    if user.name in ADMINS: continue
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:35:06,760 discord.gateway WARNING Shard ID None heartbeat blocked for more than 110 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:35:16,764 discord.gateway WARNING Shard ID None heartbeat blocked for more than 120 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:35:26,768 discord.gateway WARNING Shard ID None heartbeat blocked for more than 130 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:35:36,774 discord.gateway WARNING Shard ID None heartbeat blocked for more than 140 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:35:46,776 discord.gateway WARNING Shard ID None heartbeat blocked for more than 150 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:35:56,777 discord.gateway WARNING Shard ID None heartbeat blocked for more than 160 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:36:06,783 discord.gateway WARNING Shard ID None heartbeat blocked for more than 170 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:36:16,788 discord.gateway WARNING Shard ID None heartbeat blocked for more than 180 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:36:26,790 discord.gateway WARNING Shard ID None heartbeat blocked for more than 190 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:36:36,793 discord.gateway WARNING Shard ID None heartbeat blocked for more than 200 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 196, in leaderboard
+    )
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 147, in fetch_exp_and_levelup
+    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:37:05,655 root INFO Running Urban Planning
+12:37:05,655 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:37:05,656 asyncio DEBUG Using selector: EpollSelector
+12:37:05,656 discord.client INFO logging in using static token
+12:37:06,651 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 478d719af84ebc8fc0667ee291262281).
+12:41:37,163 root INFO Running Urban Planning
+12:41:37,164 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:41:37,168 asyncio DEBUG Using selector: EpollSelector
+12:41:37,169 discord.client INFO logging in using static token
+12:41:38,64 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 9f289d5b21785a7e02b979f29ce4ff86).
+12:42:29,97 discord.gateway WARNING Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_roles(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:42:39,101 discord.gateway WARNING Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_roles(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:42:49,105 discord.gateway WARNING Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_roles(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:42:50,650 root INFO Running Urban Planning
+12:42:50,651 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:42:50,652 asyncio DEBUG Using selector: EpollSelector
+12:42:50,653 discord.client INFO logging in using static token
+12:42:51,498 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: b7041c8c017543cb4279a604cd549a4f).
+12:43:32,149 root INFO Running Urban Planning
+12:43:32,150 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:43:32,151 asyncio DEBUG Using selector: EpollSelector
+12:43:32,152 discord.client INFO logging in using static token
+12:43:32,984 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: bd37dc824d50860416f410921d48798f).
+12:45:28,901 root INFO Running Urban Planning
+12:45:28,902 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:45:28,906 asyncio DEBUG Using selector: EpollSelector
+12:45:28,907 discord.client INFO logging in using static token
+12:45:29,920 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 81d8f41fcfacc8b4426096bef941053a).
+12:46:20,869 discord.gateway WARNING Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:46:30,874 discord.gateway WARNING Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:46:40,881 discord.gateway WARNING Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:46:50,887 discord.gateway WARNING Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:47:00,893 discord.gateway WARNING Shard ID None heartbeat blocked for more than 50 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:47:10,900 discord.gateway WARNING Shard ID None heartbeat blocked for more than 60 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:47:20,905 discord.gateway WARNING Shard ID None heartbeat blocked for more than 70 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:47:30,911 discord.gateway WARNING Shard ID None heartbeat blocked for more than 80 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:47:40,917 discord.gateway WARNING Shard ID None heartbeat blocked for more than 90 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:47:50,923 discord.gateway WARNING Shard ID None heartbeat blocked for more than 100 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:48:00,930 discord.gateway WARNING Shard ID None heartbeat blocked for more than 110 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:48:10,935 discord.gateway WARNING Shard ID None heartbeat blocked for more than 120 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:48:20,939 discord.gateway WARNING Shard ID None heartbeat blocked for more than 130 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:48:30,944 discord.gateway WARNING Shard ID None heartbeat blocked for more than 140 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:48:37,975 discord.ext.commands.bot ERROR Ignoring exception in command leaderboard
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 202, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 148, in fetch_exp_and_levelup
+    await user.add_role(role)
+AttributeError: 'Member' object has no attribute 'add_role'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'Member' object has no attribute 'add_role'
+12:48:38,392 discord.gateway INFO Shard ID None session has been invalidated.
+12:48:43,978 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 52806bb85f1c7ecbde263684b2c134dc).
+12:48:46,864 discord.client ERROR Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 84, in on_ready
+    self.dump_db.start()
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 392, in start
+    raise RuntimeError('Task is already launched and is not completed.')
+RuntimeError: Task is already launched and is not completed.
+12:50:08,552 asyncio ERROR Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x7f13940e8df0>
+transport: <_SelectorSocketTransport closing fd=11>
+Traceback (most recent call last):
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/selector_events.py", line 915, in write
+    n = self._sock.send(data)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/selector_events.py", line 921, in write
+    self._fatal_error(exc, 'Fatal write error on socket transport')
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/selector_events.py", line 716, in _fatal_error
+    self._force_close(exc)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/selector_events.py", line 728, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 750, in call_soon
+    self._check_closed()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+12:50:09,157 root INFO Running Urban Planning
+12:50:09,158 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:50:09,159 asyncio DEBUG Using selector: EpollSelector
+12:50:09,160 discord.client INFO logging in using static token
+12:50:10,30 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 9758d6cd508826b2129f978cd311009d).
+12:52:39,396 root INFO Running Urban Planning
+12:52:39,397 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:52:39,398 asyncio DEBUG Using selector: EpollSelector
+12:52:39,399 discord.client INFO logging in using static token
+12:52:40,213 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 2e269d060dfe7c6faf28f0a96953e5e0).
+12:52:49,621 root INFO Running Urban Planning
+12:52:49,622 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:52:49,626 asyncio DEBUG Using selector: EpollSelector
+12:52:49,627 discord.client INFO logging in using static token
+12:52:50,513 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 4af212b0e191f000e3ae297f09e96ce1).
+12:53:25,822 root INFO Running Urban Planning
+12:53:25,823 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:53:25,824 asyncio DEBUG Using selector: EpollSelector
+12:53:25,824 discord.client INFO logging in using static token
+12:53:26,773 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 4daafe6a6cdaf3ccbf03b398ac86e4ef).
+12:53:52,622 root INFO Running Urban Planning
+12:53:52,623 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:53:52,626 asyncio DEBUG Using selector: EpollSelector
+12:53:52,628 discord.client INFO logging in using static token
+12:53:53,536 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 14056b8e9862c9ca25422dfa83821b68).
+12:54:07,421 root INFO Running Urban Planning
+12:54:07,422 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:54:07,425 asyncio DEBUG Using selector: EpollSelector
+12:54:07,427 discord.client INFO logging in using static token
+12:54:08,401 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: e5cd6e77bcbb0f9c92f29a2ce1174077).
+12:54:59,380 discord.gateway WARNING Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 201, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 151, in fetch_exp_and_levelup
+    for user_role in [r.name for r in ctx.author.roles]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:55:09,386 discord.gateway WARNING Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 201, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 151, in fetch_exp_and_levelup
+    for user_role in [r.name for r in ctx.author.roles]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:55:14,705 discord.ext.commands.bot ERROR Ignoring exception in command leaderboard
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 201, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 154, in fetch_exp_and_levelup
+    print(f"remove {role.name} for {user.name}")
+TypeError: sequence item 0: expected str instance, list found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: sequence item 0: expected str instance, list found
+12:55:14,707 discord.client ERROR Attempting a reconnect in 1.58s
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 627, in connect
+    await self.ws.poll_event()
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/gateway.py", line 645, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+12:55:16,708 discord.gateway INFO Shard ID None has successfully RESUMED session e5cd6e77bcbb0f9c92f29a2ce1174077.
+12:56:07,866 root INFO Running Urban Planning
+12:56:07,868 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:56:07,876 asyncio DEBUG Using selector: EpollSelector
+12:56:07,878 discord.client INFO logging in using static token
+12:56:08,860 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 7d91f6ebc23e8e29436cc62b6d289b78).
+12:56:15,935 discord.ext.commands.bot ERROR Ignoring exception in command leaderboard
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 201, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 154, in fetch_exp_and_levelup
+    print(f"remove {role.name} for {user.name}")
+AttributeError: 'dict_itemiterator' object has no attribute 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'dict_itemiterator' object has no attribute 'name'
+12:56:56,692 root INFO Running Urban Planning
+12:56:56,693 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:56:56,696 asyncio DEBUG Using selector: EpollSelector
+12:56:56,698 discord.client INFO logging in using static token
+12:56:57,653 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 5cd1a71fc02cfa980bce48b2449405ae).
+12:57:12,491 root INFO Running Urban Planning
+12:57:12,497 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:57:12,514 asyncio DEBUG Using selector: EpollSelector
+12:57:12,520 discord.client INFO logging in using static token
+12:57:13,457 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: eef2f6f31bc2ca9a44aa1dea6bbb8fb4).
+12:57:48,146 root INFO Running Urban Planning
+12:57:48,147 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:57:48,152 asyncio DEBUG Using selector: EpollSelector
+12:57:48,153 discord.client INFO logging in using static token
+12:57:49,102 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: f51a4496f4cd43d3f74fed068476a553).
+12:58:40,106 discord.gateway WARNING Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 201, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 151, in fetch_exp_and_levelup
+    for user_role in [r.name for r in ctx.author.roles]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:58:50,107 discord.gateway WARNING Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 201, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 151, in fetch_exp_and_levelup
+    for user_role in [r.name for r in ctx.author.roles]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:59:00,108 discord.gateway WARNING Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2173, in <module>
+    main()
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 2164, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1476, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/ema/dev/red-panda-nft/discord/main.py", line 26, in <module>
+    bot.run(TOKEN)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 828, in run
+    asyncio.run(runner())
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/home/ema/.pyenv/versions/3.10.3/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1392, in on_message
+    await self.process_commands(message)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1389, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/ema/dev/red-panda-nft/discord-env/lib/python3.10/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 201, in leaderboard
+    exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
+  File "/home/ema/dev/red-panda-nft/discord/bot.py", line 151, in fetch_exp_and_levelup
+    for user_role in [r.name for r in user.roles]:
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1147, in do_wait_suspend
+    self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+  File "/home/ema/pycharm-2021.3.3/plugins/python/helpers/pydev/pydevd.py", line 1162, in _do_wait_suspend
+    time.sleep(0.01)
+
+12:59:05,860 root INFO Running Urban Planning
+12:59:05,861 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+12:59:05,862 asyncio DEBUG Using selector: EpollSelector
+12:59:05,862 discord.client INFO logging in using static token
+12:59:06,721 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 565e14e1a476c93b900403497ee70c55).
+13:04:34,949 root INFO Running Urban Planning
+13:04:34,950 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+13:04:34,952 asyncio DEBUG Using selector: EpollSelector
+13:04:34,952 discord.client INFO logging in using static token
+13:04:35,926 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: c94e0532c907c049651668eb2335e160).

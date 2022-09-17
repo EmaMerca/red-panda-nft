@@ -17,13 +17,16 @@ ROLES = {
 }
 
 EXP_ROLES = {
-    "role1": [10, 19],
-    "role2": [20, 29],
-    "role3": [30, 39],
-    "role4": [40, 49],
-    "role5": [50, math.inf]
+    "test-role": [10, 19],
+    "test-role1": [20, 34],
+#     "role3": [35, 49],
+#     "role4": [50, 59],
+#     "role5": [60, 200]
 }
 
+ADMINS = (
+    "Dog  犬", "Daxeko", "Kikko", "thetimedoesfly"
+)
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
@@ -137,11 +140,21 @@ class TwitterBot(commands.Bot):
             exp_by_uid[uid] += exp
 
         for user in ctx.guild.members:
+            if user.name not in ADMINS[0]:
+                await ctx.message.send("REMOVE ME!!!")
+                print("REMOVE ME!!!")
+                continue
             if user and user.id in exp_by_uid:
                 for role_name, minmax in EXP_ROLES.items():
+                    role = get(ctx.guild.roles, name=role_name)
                     if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
-                        role = get(ctx.guild.roles, name=role_name)
                         await user.add_roles(role)
+                        print(f"add {role.name} for {user.name}")
+                    else:
+                        for user_role in [r.name for r in user.roles]:
+                            if user_role == role.name:
+                                await user.remove_roles(role)
+                                print(f"remove {role.name} for {user.name}")
 
         return exp_by_uname, exp_by_uid
 
