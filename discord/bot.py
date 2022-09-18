@@ -1,4 +1,5 @@
 import math
+import logging
 import os
 import secrets
 from dotenv import load_dotenv
@@ -37,6 +38,18 @@ ALLOWED_CHANNELS = {
     1017360549425709097: 'twitter-verification'
 }
 
+
+logging.basicConfig(filename="log.txt",
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    datefmt='%H:%M:%S',
+                    level=logging.DEBUG)
+
+logging.info("Discord")
+
+logger = logging.getLogger('TwitterVerification')
+
+
 class TwitterBot(commands.Bot):
     def __init__(self, command_prefix, intents, database):
         commands.Bot.__init__(self, command_prefix=command_prefix, intents=intents)
@@ -47,6 +60,8 @@ class TwitterBot(commands.Bot):
 
     @tasks.loop(hours=24)
     async def dump_db(self):
+        logger.info(f"STARTING BACKUP")
+
         async def unpack_records(records):
             data = []
             for el in records:
@@ -55,21 +70,23 @@ class TwitterBot(commands.Bot):
                     record.append((k, v))
                 data.append(record)
             return data
+        try:
+            time = datetime.now()
+            fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}-{time.hour}.json"
+            experience = await self.db.fetch('SELECT * FROM experience')
+            promo = await self.db.fetch('SELECT * FROM promo')
+            retweets = await self.db.fetch('SELECT * FROM retweets')
 
-        time = datetime.now()
-        fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}-{time.hour}.json"
-        experience = await self.db.fetch('SELECT * FROM experience')
-        promo = await self.db.fetch('SELECT * FROM promo')
-        retweets = await self.db.fetch('SELECT * FROM retweets')
-
-        data = {
-            "experience": await unpack_records(experience),
-            "promo": await unpack_records(promo),
-            "retweets": await unpack_records(retweets),
-        }
-        with open(fname, "w") as f:
-            json.dump(data, f)
-
+            data = {
+                "experience": await unpack_records(experience),
+                "promo": await unpack_records(promo),
+                "retweets": await unpack_records(retweets),
+            }
+            with open(fname, "w") as f:
+                json.dump(data, f)
+        except Exception as e:
+            logger.error(f"Error during backup {e}")
+        logger.info(f"BACKUP COMPLETE")
 
     async def _fetch_promos(self):
         promos = await self.db.fetch('SELECT * FROM promo')
@@ -82,6 +99,8 @@ class TwitterBot(commands.Bot):
         await self.db._init()
         await self._fetch_promos()
         self.dump_db.start()
+        logger.info("BOT STARTED")
+
         print(self._on_ready)
 
     async def _generate_otp(self):
@@ -140,21 +159,18 @@ class TwitterBot(commands.Bot):
             exp_by_uid[uid] += exp
 
         for user in ctx.guild.members:
-            if user.name not in ADMINS[0]:
-                await ctx.message.send("REMOVE ME!!!")
-                print("REMOVE ME!!!")
-                continue
+            if user.name in ADMINS: continue
             if user and user.id in exp_by_uid:
                 for role_name, minmax in EXP_ROLES.items():
                     role = get(ctx.guild.roles, name=role_name)
                     if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
                         await user.add_roles(role)
-                        print(f"add {role.name} for {user.name}")
+                        logger.info(f"add {role.name} for {user.name}")
                     else:
                         for user_role in [r.name for r in user.roles]:
                             if user_role == role.name:
                                 await user.remove_roles(role)
-                                print(f"remove {role.name} for {user.name}")
+                                logger.info(f"remove {role.name} for {user.name}")
 
         return exp_by_uname, exp_by_uid
 
@@ -170,8 +186,9 @@ class TwitterBot(commands.Bot):
 
             try:
                 url = ctx.message.content.split()[1]
-            except IndexError:
+            except Exception as e:
                 await ctx.author.send("Wrong message format. The correct format is '!promo tweet_url'")
+                logger.error(f"Promo command error {e}")
                 return
 
             if url in self.tweet_to_promo_code:
@@ -185,6 +202,7 @@ class TwitterBot(commands.Bot):
             self.used_codes.append(new_code)
             await self.db.write('INSERT INTO promo(url, code) VALUES($1, $2)', url, self.tweet_to_promo_code[url])
             await ctx.author.send(f"Promo code: {self.tweet_to_promo_code[url]}")
+            logger.info(f"{ctx.author.name} generated promo {self.tweet_to_promo_code[url]} for content {url}")
 
 
 
@@ -192,7 +210,7 @@ class TwitterBot(commands.Bot):
         async def leaderboard(ctx):
             def format_output(experience):
                 sorted_exps = sorted(
-                    [[k, v] for k, v in experience.items()],
+                    [[name, exp] for name, exp in experience.items() if name not in ADMINS],
                     key=lambda x: x[1],
                     reverse=True
                 )
@@ -216,7 +234,8 @@ class TwitterBot(commands.Bot):
                 tweet_id = url.split("/")[-1]
                 tweet_author = url.split("/")[3]
                 author_id = ctx.author.id
-            except IndexError:
+            except Exception as e:
+                logger.error(f"Verification error {e}")
                 await ctx.author.send("Wrong message format. The correct format is '!verify tweet_url promo_code'")
                 return
 
@@ -241,6 +260,7 @@ class TwitterBot(commands.Bot):
 
             await self.update_promo(author_id, promo_code)
             await ctx.author.send(f"Tweet has been verified!")
+            logger.info(f"{ctx.author.name} verified")
 
 
 

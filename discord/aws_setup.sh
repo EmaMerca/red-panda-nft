@@ -1,6 +1,6 @@
-sudo yum update -y
-sudo yum groupinstall "Development Tools" -y
-sudo yum install openssl11 openssl11-devel  libffi-devel bzip2-devel wget -y
+sudo apt-get update -y
+sudo apt-get groupinstall "Development Tools" -y
+sudo apt-get install openssl11 openssl11-devel  libffi-devel bzip2-devel wget -y
 
 wget https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tgz
 tar -xf Python-3.10.4.tgz
@@ -10,8 +10,8 @@ make -j $(nproc)
 sudo make altinstall
 
 cd
-sudo yum install python3-pip locate
-sudo yum install postgresql libpq-dev postgresql-client postgresql-client-common
+sudo apt-get install python3-pip locate
+sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-common
 mkdir ~/discord && cd ~/discord
 python3.10 -m venv discord_venv
 source discord_venv/bin/activate
