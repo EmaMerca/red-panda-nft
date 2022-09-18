@@ -18,21 +18,23 @@ ROLES = {
 }
 
 EXP_ROLES = {
-    "test-role": [10, 19],
-    "test-role1": [20, 34],
-#     "role3": [35, 49],
-#     "role4": [50, 59],
-#     "role5": [60, 200]
-}
+    "Akamateur": [11, 19],
+    "Akamate": [20, 34],
+    "Akacool": [35, 49],
+    "Akaicon": [50, 59],
+    "Akaidol": [60, 200]
+    }
 
 ADMINS = (
-    "Dog  犬", "Daxeko", "Kikko", "thetimedoesfly"
+    "Dog  犬", "Daxeko",  "thetimedoesfly", "Kikko"
 )
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 PASSW_LENGTH = 16
 WAIT_FOR_COMMENT = 60
+
+INVITES_CAP = 10
 
 ALLOWED_CHANNELS = {
     1017360549425709097: 'twitter-verification'
@@ -142,6 +144,10 @@ class TwitterBot(commands.Bot):
         return False
 
 
+    async def is_valid_content(self, url):
+        if "/twitter.com/akajukus/" in url:
+            return True
+
     async def fetch_exp_and_levelup(self, ctx):
         tweet_experience = [[el["uid"], int(el["exp"]), el["uname"]] for el in
                             await self.db.fetch('SELECT * FROM experience')]
@@ -149,7 +155,7 @@ class TwitterBot(commands.Bot):
 
         exp_by_uname = {}
         exp_by_uid = {}
-        for uid, exp, uname in tweet_experience + invites_by_user:
+        for uid, exp, uname in tweet_experience:
             if uname not in exp_by_uname:
                 exp_by_uname[uname] = 0
             exp_by_uname[uname] += exp
@@ -158,8 +164,23 @@ class TwitterBot(commands.Bot):
                 exp_by_uid[uid] = 0
             exp_by_uid[uid] += exp
 
+        for uid, exp, uname in invites_by_user:
+            if uname not in exp_by_uname:
+                exp_by_uname[uname] = 0
+            exp_by_uname[uname] += exp if exp <= INVITES_CAP else INVITES_CAP
+
+            if uid not in exp_by_uid:
+                exp_by_uid[uid] = 0
+            exp_by_uid[uid] += exp if exp <= INVITES_CAP else INVITES_CAP
+
         for user in ctx.guild.members:
             if user.name in ADMINS: continue
+            user_roles = [r.name for r in user.roles]
+            if "Akasenior" in user_roles:
+                if user.id not in exp_by_uid:
+                    exp_by_uid[user.id] = 0
+                exp_by_uid[user.id] += 35
+
             if user and user.id in exp_by_uid:
                 for role_name, minmax in EXP_ROLES.items():
                     role = get(ctx.guild.roles, name=role_name)
@@ -167,7 +188,7 @@ class TwitterBot(commands.Bot):
                         await user.add_roles(role)
                         logger.info(f"add {role.name} for {user.name}")
                     else:
-                        for user_role in [r.name for r in user.roles]:
+                        for user_role in user_roles:
                             if user_role == role.name:
                                 await user.remove_roles(role)
                                 logger.info(f"remove {role.name} for {user.name}")
@@ -178,8 +199,6 @@ class TwitterBot(commands.Bot):
         @self.command(name="promo", pass_context=True)
         async def promo(ctx):
 
-            if not await self.is_channel_allowed(ctx):
-                return
             if not await self._is_admin(ctx):
                 await ctx.author.send("Admin only command!")
                 return
@@ -190,6 +209,10 @@ class TwitterBot(commands.Bot):
                 await ctx.author.send("Wrong message format. The correct format is '!promo tweet_url'")
                 logger.error(f"Promo command error {e}")
                 return
+            if not await self.is_valid_content(url):
+                return await ctx.author.send(
+                    f"{url} is not a valid tweet"
+                )
 
             if url in self.tweet_to_promo_code:
                 await ctx.author.send(
@@ -215,10 +238,10 @@ class TwitterBot(commands.Bot):
                     reverse=True
                 )
                 return "\n".join([f"{el[0]}: {el[1]}exp" for el in sorted_exps])
-
             if not await self.is_channel_allowed(ctx):
                 return
 
+            print("here")
             exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
             await ctx.channel.send(format_output(exp_by_uname))
 
@@ -231,7 +254,8 @@ class TwitterBot(commands.Bot):
             try:
                 url = ctx.message.content.split()[1]
                 promo_code = ctx.message.content.split()[2]
-                tweet_id = url.split("/")[-1]
+                raw_tweet_id = url.split("/")[-1]
+                tweet_id = raw_tweet_id.split("?")[0]
                 tweet_author = url.split("/")[3]
                 author_id = ctx.author.id
             except Exception as e:
@@ -248,9 +272,9 @@ class TwitterBot(commands.Bot):
                 return
 
             otp = await self._generate_otp()
-            await ctx.author.send(f"Comment your tweet with the following code within the next {WAIT_FOR_COMMENT} seconds.\nCode: {otp}")
+            await ctx.author.send(f"Comment your tweet with the following code within the next {WAIT_FOR_COMMENT} seconds. Code:")
+            await ctx.author.send(f"{otp}")
             await asyncio.sleep(WAIT_FOR_COMMENT)
-
             if not await verify_tweet(tweet_id, tweet_author, otp):
                 await ctx.author.send(f"Couldn't verify the post. you either "
                                       f"commented with the wrong code or commented the wrong tweet")
@@ -270,6 +294,10 @@ class TwitterBot(commands.Bot):
                 invites_by_user = {i.inviter.id: i.uses for i in await ctx.guild.invites() if i.uses > 0}
 !promo https://twitter.com/akajukus/status/1568992773235245058?s=46&t=3aa7bb85dOByP9OlN4F-NA
 !verify https://twitter.com/2Fast_4Love/status/1569987234874507265 AKA0                
+
+
+m = ctx.guild.members 
+m.guild_permissions.send_messages
 """
 
 
