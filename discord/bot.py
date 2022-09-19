@@ -36,7 +36,7 @@ PASSW_LENGTH = 16
 WAIT_FOR_COMMENT = 60
 
 INVITES_CAP = 10
-
+UPDATE_ROLES_EVERY = 24 # 24 * 5 mins = 2h
 VERIFICATION_CHANNEL = 1017360549425709097
 LEADERBOARD_CHANNEL = 1021457318300373113
 ALLOWED_CHANNELS = {
@@ -57,6 +57,7 @@ logger = logging.getLogger('TwitterVerification')
 class TwitterBot(commands.Bot):
     def __init__(self, command_prefix, intents, database):
         commands.Bot.__init__(self, command_prefix=command_prefix, intents=intents)
+        self.update_roles_count = UPDATE_ROLES_EVERY
         self._on_ready = "[INFO] Bot now online"
         self.add_commands()
         self.db = database
@@ -93,7 +94,7 @@ class TwitterBot(commands.Bot):
             logger.error(f"Error during backup {e}")
         logger.info(f"BACKUP COMPLETE")
 
-    @tasks.loop(hours=24)
+    @tasks.loop(minutes=5)
     async def leaderboard(self):
         def format_leaderboard(lb):
             sorted_exps = sorted(
@@ -140,17 +141,21 @@ class TwitterBot(commands.Bot):
         for uid, data in users.items():
             exp = data["exp"]
             if (uname := data["uname"]) in ADMINS: continue
-            member = guild_members[uid]
-            current_roles = members_roles[uid]
-            if not (expected_role_name := get_role(exp)): continue
-            expected_role = roles[expected_role_name]
+            if self.update_roles_count == 0:
+                self.update_roles_count = UPDATE_ROLES_EVERY
+                member = guild_members[uid]
+                current_roles = members_roles[uid]
+                if not (expected_role_name := get_role(exp)): continue
+                expected_role = roles[expected_role_name]
 
-            if len(current_roles.keys()) == 0:
-                await member.add_roles(expected_role)
-            elif [expected_role_name] != list(current_roles.keys()):
-                for _, role in current_roles.keys():
-                    await member.remove_roles(role)
-                await member.add_roles(expected_role)
+                if len(current_roles.keys()) == 0:
+                    await member.add_roles(expected_role)
+                elif [expected_role_name] != list(current_roles.keys()):
+                    for _, role in current_roles.keys():
+                        await member.remove_roles(role)
+                    await member.add_roles(expected_role)
+            else:
+                self.update_roles_count -= 1
 
             leaderboard.append([uname, exp])
 
