@@ -80,12 +80,12 @@ class TwitterBot(commands.Bot):
         try:
             time = datetime.now()
             fname = f"./dumps/dump_{time.year}{time.month}{time.hour}{time.day}-{time.hour}.json"
-            experience = await self.db.fetch('SELECT * FROM experience')
+            users = await self.db.fetch('SELECT * FROM users')
             promo = await self.db.fetch('SELECT * FROM promo')
             retweets = await self.db.fetch('SELECT * FROM retweets')
 
             data = {
-                "experience": await unpack_records(experience),
+                "users": await unpack_records(users),
                 "promo": await unpack_records(promo),
                 "retweets": await unpack_records(retweets),
             }
