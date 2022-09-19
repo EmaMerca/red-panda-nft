@@ -38,12 +38,11 @@ WAIT_FOR_COMMENT = 60
 INVITES_CAP = 10
 
 VERIFICATION_CHANNEL = 1017360549425709097
-LEADERBOARD_CHANNEL = 1004495124451053608
+LEADERBOARD_CHANNEL = 1021457318300373113
 ALLOWED_CHANNELS = {
     'twitter-verification': VERIFICATION_CHANNEL,
     "leaderboard": LEADERBOARD_CHANNEL,
 }
-
 logging.basicConfig(filename="log.txt",
                     filemode='a',
                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
