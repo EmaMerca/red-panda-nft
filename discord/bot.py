@@ -37,13 +37,12 @@ WAIT_FOR_COMMENT = 60
 
 INVITES_CAP = 10
 
-ALLOWED_CHANNELS = {
-    'twitter-verification': 1021124345894023278,
-    "leaderboard": 1021113993923924040,
-}
-
 VERIFICATION_CHANNEL = 1017360549425709097
-LEADERBOARD_CHANNEL = 1021113993923924040
+LEADERBOARD_CHANNEL = 1004495124451053608
+ALLOWED_CHANNELS = {
+    'twitter-verification': VERIFICATION_CHANNEL,
+    "leaderboard": LEADERBOARD_CHANNEL,
+}
 
 logging.basicConfig(filename="log.txt",
                     filemode='a',
@@ -158,7 +157,7 @@ class TwitterBot(commands.Bot):
 
 
 
-        await self.get_channel(LEADERBOARD_CHANNEL).send("LEADERBOARD UPDATES \n\t+++\n check your rank")
+        await self.get_channel(LEADERBOARD_CHANNEL).send("LEADERBOARD UPDATES \n+++\n check your rank")
         for line in format_leaderboard(leaderboard):
             await self.get_channel(LEADERBOARD_CHANNEL).send(line)
 
