@@ -40,7 +40,7 @@ class Database:
             async with connection.transaction():
                 try:
                     await connection.execute(
-                        'CREATE TABLE users(id PRIMARY KEY, uid bigint, uname text, iexp float, texp float, aexp float, role text)'
+                        'CREATE TABLE users(id serial PRIMARY KEY, uid bigint, uname text, iexp float, texp float, aexp float, role text)'
                     )
                 except asyncpg.exceptions.DuplicateTableError:
                     pass

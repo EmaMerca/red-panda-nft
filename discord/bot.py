@@ -12,7 +12,7 @@ from verify import verify_tweet
 import math
 
 PROMO_PREFIX = "AKA"
-
+GUILD_ID = 1004495124451053608
 ROLES = {
     "admin": 1004495124451053613,
     "dev": 1004495124451053612,
@@ -62,7 +62,7 @@ class TwitterBot(commands.Bot):
         self._on_ready = "[INFO] Bot now online"
         self.add_commands()
         self.db = database
-        self.guild_id = None #TODO
+        self.guild_id = GUILD_ID
 
 
     @tasks.loop(hours=24)
@@ -95,7 +95,7 @@ class TwitterBot(commands.Bot):
             logger.error(f"Error during backup {e}")
         logger.info(f"BACKUP COMPLETE")
 
-    @tasks.loop(hours=12)
+    @tasks.loop(hours=24)
     async def leaderboard(self):
         def format_leaderboard(lb):
             sorted_exps = sorted(
@@ -103,7 +103,15 @@ class TwitterBot(commands.Bot):
                 key=lambda x: x[1],
                 reverse=True
             )
-            return "\n".join([f"{el[0]}: {el[1]}exp" for el in sorted_exps])
+            lb = []
+            line = ""
+            for el in sorted_exps:
+                if len(line) < 1800:
+                    line += f"{el[0]}: {int(el[1])}exp\n"
+                else:
+                    lb.append(line)
+                    line = ""
+            return lb
 
         def get_role(exp):
             for role_name, minmax in EXP_ROLES.items():
@@ -128,30 +136,35 @@ class TwitterBot(commands.Bot):
             users[user.get("uid")] = {
                 "uname": user.get("uname"),
                 "exp":  exp,
-                "current_role": user.get("role")
             }
 
         leaderboard = []
         for uid, data in users.items():
             exp = data["exp"]
-            uname = data["uname"]
+            if (uname := data["uname"]) in ADMINS: continue
+            member = guild_members[uid]
             current_roles = members_roles[uid]
-            expected_role_name = get_role(exp)
-            if len(current_roles.keys()) > 0 and [expected_role_name] != list(current_roles.keys()):
-                member = guild_members[uid]
-                expected_role = roles[expected_role_name]
+            expected_role = roles[expected_role_name]
+            if not (expected_role_name := get_role(exp)): continue
+            if len(current_roles.keys()) == 0:
+                await member.add_roles(expected_role)
+            elif [expected_role_name] != list(current_roles.keys()):
                 for _, role in current_roles.keys():
                     await member.remove_roles(role)
                 await member.add_roles(expected_role)
 
             leaderboard.append([uname, exp])
 
-        await self.get_channel(LEADERBOARD_CHANNEL).send(format_leaderboard(leaderboard))
+
+
+        await self.get_channel(LEADERBOARD_CHANNEL).send("LEADERBOARD UPDATES \n\t+++\n check your rank")
+        for line in format_leaderboard(leaderboard):
+            await self.get_channel(LEADERBOARD_CHANNEL).send(line)
 
 
     async def update_invites(self, guild):
-        for inv in guild.invites():
-            user_data = self.db.fetch('SELECT * from users WHERE uid = $1', inv.inviter.id)
+        for inv in await guild.invites():
+            user_data = await self.db.fetch('SELECT * from users WHERE uid = $1', inv.inviter.id)
             if len(user_data) > 0:
                 await self.db.write('UPDATE users SET iexp = $1 WHERE uid = $2', inv.uses, inv.inviter.id)
             else:
@@ -161,7 +174,7 @@ class TwitterBot(commands.Bot):
     async def add_senior_exp(self, guild):
         for user in guild.members:
             if "Akasenior" in [r.name for r in user.roles]:
-                user_data = self.db.fetch('SELECT * from users WHERE uid = $1', user.id)
+                user_data = await self.db.fetch('SELECT * from users WHERE uid = $1', user.id)
                 if len(user_data) > 0:
                     await self.db.write('UPDATE users SET aexp = 35 WHERE uid = $1', user.id)
                 else:
@@ -178,8 +191,8 @@ class TwitterBot(commands.Bot):
     async def on_ready(self):
         await self.db._init()
         await self._fetch_promos()
-        self.dump_db.start()
         self.leaderboard.start()
+        self.dump_db.start()
         logger.info("BOT STARTED")
 
         print(self._on_ready)
@@ -188,8 +201,7 @@ class TwitterBot(commands.Bot):
         return secrets.token_urlsafe(PASSW_LENGTH)
 
     async def _is_admin(self, ctx):
-        roles = [role.id for role in ctx.author.roles]
-        return ROLES["admin"] in roles
+        return ctx.author.name in ADMINS
 
     async def _promo_claimed(self, author_id, promo_code):
         promo_by_author = await self.db.fetch('SELECT * FROM retweets WHERE UID = $1', author_id)
@@ -229,58 +241,6 @@ class TwitterBot(commands.Bot):
         if "/twitter.com/akajukus/" in url:
             return True
 
-    async def fetch_exp_and_levelup(self, ctx):
-        tweet_experience = [[el["uid"], int(el["exp"]), el["uname"]] for el in
-                            await self.db.fetch('SELECT * FROM experience')]
-        invites_by_user = [[i.inviter.id, i.uses, i.inviter.name] for i in await ctx.guild.invites() if i.uses > 0]
-
-        exp_by_uname = {}
-        exp_by_uid = {}
-        for uid, exp, uname in tweet_experience:
-            if uname not in exp_by_uname:
-                exp_by_uname[uname] = 0
-            exp_by_uname[uname] += exp
-
-            if uid not in exp_by_uid:
-                exp_by_uid[uid] = 0
-            exp_by_uid[uid] += exp
-
-        for uid, exp, uname in invites_by_user:
-            if uname not in exp_by_uname:
-                exp_by_uname[uname] = 0
-            exp_by_uname[uname] += exp if exp <= INVITES_CAP else INVITES_CAP
-
-            if uid not in exp_by_uid:
-                exp_by_uid[uid] = 0
-            exp_by_uid[uid] += exp if exp <= INVITES_CAP else INVITES_CAP
-
-        for user in ctx.guild.members:
-            if user.bot: continue
-            if "Akasenior" in [r.name for r in user.roles]:
-                if user.id not in exp_by_uid:
-                    exp_by_uid[user.id] = 0
-                exp_by_uid[user.id] += 35
-                if user.id not in exp_by_uname:
-                    exp_by_uname[user.id] = 0
-                exp_by_uname[user.id] += 35
-
-        for i, user in enumerate(ctx.guild.members):
-            if user.name in ADMINS or user.bot: continue
-            user_roles = [r.name for r in user.roles]
-            if user and user.id in exp_by_uid.keys():
-                for role_name, minmax in EXP_ROLES.items():
-                    role = get(ctx.guild.roles, name=role_name)
-                    if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
-                        await user.add_roles(role)
-                    else:
-                        for user_role in user_roles:
-                            if user_role == role.name:
-                                await user.remove_roles(role)
-
-        return exp_by_uname, exp_by_uid
-
-
-
     def add_commands(self):
         @self.command(name="promo", pass_context=True)
         async def promo(ctx):
@@ -315,31 +275,8 @@ class TwitterBot(commands.Bot):
 
 
 
-        @self.command(name="leaderboard", pass_context=True)
-        async def leaderboard(ctx):
-            return
-
-            if not await self._is_admin(ctx):
-                await ctx.author.send("Admin only command!")
-                return
-
-            def format_output(experience):
-                sorted_exps = sorted(
-                    [[name, exp] for name, exp in experience.items() if name not in ADMINS],
-                    key=lambda x: x[1],
-                    reverse=True
-                )
-                return "\n".join([f"{el[0]}: {el[1]}exp" for el in sorted_exps])
-            if not await self.is_channel_allowed(ctx, ["leaderboard"]):
-                return
-
-            exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
-            await ctx.channel.send(format_output(exp_by_uname))
-
-
         @self.command(name="verify", pass_context=True)
         async def verify(ctx):
-
             if not await self.is_channel_allowed(ctx, ["twitter-verification"]):
                 return
             try:
