@@ -98,10 +98,12 @@ class TwitterBot(commands.Bot):
     @tasks.loop(minutes=5)
     async def leaderboard(self):
         def format_leaderboard(lb):
+            import operator
+            low = lambda x: x[0].lower() + x[1:]
             sorted_exps = sorted(
-                [[name, exp] for name, exp in lb],
-                key=lambda x: (-x[1], x[0]),
-                reverse=False
+                [[low(name), exp] for name, exp in lb],
+                key=operator.itemgetter(1, 0),
+                reverse=True
             )
             lb = []
             line = ""
@@ -111,6 +113,7 @@ class TwitterBot(commands.Bot):
                 else:
                     lb.append(line)
                     line = ""
+            lb.append(line)
             return lb
 
         def get_role(exp):
