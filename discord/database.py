@@ -20,6 +20,7 @@ class Database:
         await self._create_exp_db()
         await self._create_promo_db()
         await self._create_retweets_db()
+        await self._create_users_db()
 
     async def _create_pool(self):
         self.pool = await asyncpg.create_pool(f'postgresql://{self.user}:{self.passw}@localhost/{self.db}')
@@ -30,6 +31,16 @@ class Database:
                 try:
                     await connection.execute(
                         'CREATE TABLE experience(id serial PRIMARY KEY, uid bigint, uname text, exp float)'
+                    )
+                except asyncpg.exceptions.DuplicateTableError:
+                    pass
+
+    async def _create_users_db(self):
+        async with self.pool.acquire() as connection:
+            async with connection.transaction():
+                try:
+                    await connection.execute(
+                        'CREATE TABLE users(id PRIMARY KEY, uid bigint, uname text, iexp float, texp float, role text)'
                     )
                 except asyncpg.exceptions.DuplicateTableError:
                     pass

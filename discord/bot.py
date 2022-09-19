@@ -37,9 +37,12 @@ WAIT_FOR_COMMENT = 60
 INVITES_CAP = 10
 
 ALLOWED_CHANNELS = {
-    1017360549425709097: 'twitter-verification'
+    'twitter-verification': 1021124345894023278,
+    "leaderboard": 1021113993923924040,
 }
 
+VERIFICATION_CHANNEL = 1017360549425709097
+LEADERBOARD_CHANNEL = 1021113993923924040
 
 logging.basicConfig(filename="log.txt",
                     filemode='a',
@@ -58,6 +61,7 @@ class TwitterBot(commands.Bot):
         self._on_ready = "[INFO] Bot now online"
         self.add_commands()
         self.db = database
+        self.guild_id = None #TODO
 
 
     @tasks.loop(hours=24)
@@ -90,6 +94,63 @@ class TwitterBot(commands.Bot):
             logger.error(f"Error during backup {e}")
         logger.info(f"BACKUP COMPLETE")
 
+    @tasks.loop(hours=12)
+    async def leaderboard(self):
+        def format_leaderboard(lb):
+            sorted_exps = sorted(
+                [[name, exp] for name, exp in lb],
+                key=lambda x: x[1],
+                reverse=True
+            )
+            return "\n".join([f"{el[0]}: {el[1]}exp" for el in sorted_exps])
+
+        def get_role(exp):
+            for role_name, minmax in EXP_ROLES.items():
+                if minmax[0] <= exp <= minmax[1]:
+                    return role_name
+
+        guild = self.get_guild(self.guild_id)
+        guild_roles = guild.roles
+        roles = {role_name: get(guild_roles, name=role_name) for role_name in EXP_ROLES.keys()}
+        guild_members = {member.id: member for member in guild.members}
+
+        await self.update_invites(guild)
+
+        users = {}
+        for user in await self.db.fetch('SELECT * FROM users'):
+            iexp = user.get("iexp")
+            exp = iexp if iexp <= INVITES_CAP else INVITES_CAP
+            exp += user.get("texp")
+            users[user.get("uid")] = {
+                "uname": user.get("uname"),
+                "exp":  exp,
+                "current_role": user.get("role")
+            }
+
+        leaderboard = []
+        for uid, data in users.items():
+            exp = data["exp"]
+            uname = data["uname"]
+            current_role_name = data["current_role"]
+            expected_role_name = get_role(exp)
+            if expected_role_name != current_role_name:
+                member = guild_members[uid]
+                expected_role = roles[expected_role_name]
+                current_role = roles[current_role_name]
+                await member.add_roles(expected_role)
+                await member.remove_roles(current_role)
+
+            leaderboard.append([uname, exp])
+
+        await self.get_channel(LEADERBOARD_CHANNEL).send(format_leaderboard(leaderboard))
+
+
+    async def update_invites(self, guild):
+        for inv in guild.invites():
+            # TODO: set exp
+            await self.db.write('UPDATE users SET exp = $1, role = $2 WHERE uid = $3', inv.uses, inv.inviter.id)
+
+
     async def _fetch_promos(self):
         promos = await self.db.fetch('SELECT * FROM promo')
         self.tweet_to_promo_code = {el.get("url"): el.get("code") for el in promos} if promos else {}
@@ -101,6 +162,7 @@ class TwitterBot(commands.Bot):
         await self.db._init()
         await self._fetch_promos()
         self.dump_db.start()
+        self.leaderboard.start()
         logger.info("BOT STARTED")
 
         print(self._on_ready)
@@ -132,11 +194,13 @@ class TwitterBot(commands.Bot):
         return promo_code in self.tweet_to_promo_code.values()
 
 
-    async def is_channel_allowed(self, ctx):
-        def format_output():
-            return '\n'.join(list(ALLOWED_CHANNELS.values()))
+    async def is_channel_allowed(self, ctx, channels):
 
-        if ctx.channel.id in ALLOWED_CHANNELS:
+        allowed_channels_ids = []
+        for channel in channels:
+            allowed_channels_ids.append(ALLOWED_CHANNELS[channel])
+
+        if ctx.channel.id in allowed_channels_ids:
             return True
 
         command = ctx.message.content.split()[0]
@@ -174,26 +238,31 @@ class TwitterBot(commands.Bot):
             exp_by_uid[uid] += exp if exp <= INVITES_CAP else INVITES_CAP
 
         for user in ctx.guild.members:
-            if user.name in ADMINS: continue
-            user_roles = [r.name for r in user.roles]
-            if "Akasenior" in user_roles:
+            if user.bot: continue
+            if "Akasenior" in [r.name for r in user.roles]:
                 if user.id not in exp_by_uid:
                     exp_by_uid[user.id] = 0
                 exp_by_uid[user.id] += 35
+                if user.id not in exp_by_uname:
+                    exp_by_uname[user.id] = 0
+                exp_by_uname[user.id] += 35
 
-            if user and user.id in exp_by_uid:
+        for i, user in enumerate(ctx.guild.members):
+            if user.name in ADMINS or user.bot: continue
+            user_roles = [r.name for r in user.roles]
+            if user and user.id in exp_by_uid.keys():
                 for role_name, minmax in EXP_ROLES.items():
                     role = get(ctx.guild.roles, name=role_name)
                     if minmax[0] <= exp_by_uid[user.id] <= minmax[1]:
                         await user.add_roles(role)
-                        logger.info(f"add {role.name} for {user.name}")
                     else:
                         for user_role in user_roles:
                             if user_role == role.name:
                                 await user.remove_roles(role)
-                                logger.info(f"remove {role.name} for {user.name}")
 
         return exp_by_uname, exp_by_uid
+
+
 
     def add_commands(self):
         @self.command(name="promo", pass_context=True)
@@ -231,6 +300,10 @@ class TwitterBot(commands.Bot):
 
         @self.command(name="leaderboard", pass_context=True)
         async def leaderboard(ctx):
+            if not await self._is_admin(ctx):
+                await ctx.author.send("Admin only command!")
+                return
+
             def format_output(experience):
                 sorted_exps = sorted(
                     [[name, exp] for name, exp in experience.items() if name not in ADMINS],
@@ -238,10 +311,9 @@ class TwitterBot(commands.Bot):
                     reverse=True
                 )
                 return "\n".join([f"{el[0]}: {el[1]}exp" for el in sorted_exps])
-            if not await self.is_channel_allowed(ctx):
+            if not await self.is_channel_allowed(ctx, ["leaderboard"]):
                 return
 
-            print("here")
             exp_by_uname, exp_by_uid = await self.fetch_exp_and_levelup(ctx)
             await ctx.channel.send(format_output(exp_by_uname))
 
@@ -249,7 +321,7 @@ class TwitterBot(commands.Bot):
         @self.command(name="verify", pass_context=True)
         async def verify(ctx):
 
-            if not await self.is_channel_allowed(ctx):
+            if not await self.is_channel_allowed(ctx, ["twitter-verification"]):
                 return
             try:
                 url = ctx.message.content.split()[1]
