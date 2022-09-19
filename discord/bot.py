@@ -144,8 +144,9 @@ class TwitterBot(commands.Bot):
             if (uname := data["uname"]) in ADMINS: continue
             member = guild_members[uid]
             current_roles = members_roles[uid]
-            expected_role = roles[expected_role_name]
             if not (expected_role_name := get_role(exp)): continue
+            expected_role = roles[expected_role_name]
+
             if len(current_roles.keys()) == 0:
                 await member.add_roles(expected_role)
             elif [expected_role_name] != list(current_roles.keys()):
