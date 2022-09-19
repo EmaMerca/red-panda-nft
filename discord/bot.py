@@ -19,6 +19,7 @@ ROLES = {
 }
 
 EXP_ROLES = {
+    "Akanovice": [0, 10],
     "Akamateur": [11, 19],
     "Akamate": [20, 34],
     "Akacool": [35, 49],
@@ -99,8 +100,8 @@ class TwitterBot(commands.Bot):
         def format_leaderboard(lb):
             sorted_exps = sorted(
                 [[name, exp] for name, exp in lb],
-                key=lambda x: x[1],
-                reverse=True
+                key=lambda x: (-x[1], x[0]),
+                reverse=False
             )
             lb = []
             line = ""
@@ -125,6 +126,7 @@ class TwitterBot(commands.Bot):
                          for member in guild.members}
         await self.update_invites(guild)
         await self.add_senior_exp(guild)
+        await self.update_users(guild)
 
         users = {}
         for user in await self.db.fetch('SELECT * FROM users'):
@@ -140,7 +142,7 @@ class TwitterBot(commands.Bot):
         leaderboard = []
         for uid, data in users.items():
             exp = data["exp"]
-            if (uname := data["uname"]) in ADMINS: continue
+            uname = data["uname"]
             if self.update_roles_count == 0:
                 self.update_roles_count = UPDATE_ROLES_EVERY
                 member = guild_members[uid]
@@ -174,6 +176,13 @@ class TwitterBot(commands.Bot):
             else:
                 await self.db.write('INSERT INTO users(uid, uname, iexp) VALUES($1, $2, $3)',
                                     inv.inviter.id, inv.inviter.name, inv.uses,)
+
+    async def update_users(self, guild):
+        for user in guild.members:
+            user_data = await self.db.fetch('SELECT * from users WHERE uid = $1', user.id)
+            if len(user_data) == 0:
+                await self.db.write('INSERT INTO users(uid, uname, iexp, aexp, texp) VALUES($1, $2, 0, 0, 0)',
+                                    user.id, user.name)
 
     async def add_senior_exp(self, guild):
         for user in guild.members:
