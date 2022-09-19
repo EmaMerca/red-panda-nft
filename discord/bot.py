@@ -10,6 +10,7 @@ import json
 from datetime import datetime
 from verify import verify_tweet
 import math
+
 PROMO_PREFIX = "AKA"
 
 ROLES = {
@@ -113,14 +114,17 @@ class TwitterBot(commands.Bot):
         guild_roles = guild.roles
         roles = {role_name: get(guild_roles, name=role_name) for role_name in EXP_ROLES.keys()}
         guild_members = {member.id: member for member in guild.members}
-
+        members_roles = {member.id: {role.name: role for role in member.roles if role.name in EXP_ROLES.keys()}
+                         for member in guild.members}
         await self.update_invites(guild)
+        await self.add_senior_exp(guild)
 
         users = {}
         for user in await self.db.fetch('SELECT * FROM users'):
-            iexp = user.get("iexp")
+            iexp = e if (e := user.get("iexp")) is not None else 0
             exp = iexp if iexp <= INVITES_CAP else INVITES_CAP
-            exp += user.get("texp")
+            exp += e if (e := user.get("texp")) is not None else 0
+            exp += e if (e := user.get("aexp")) is not None else 0
             users[user.get("uid")] = {
                 "uname": user.get("uname"),
                 "exp":  exp,
@@ -131,14 +135,14 @@ class TwitterBot(commands.Bot):
         for uid, data in users.items():
             exp = data["exp"]
             uname = data["uname"]
-            current_role_name = data["current_role"]
+            current_roles = members_roles[uid]
             expected_role_name = get_role(exp)
-            if expected_role_name != current_role_name:
+            if len(current_roles.keys()) > 0 and [expected_role_name] != list(current_roles.keys()):
                 member = guild_members[uid]
                 expected_role = roles[expected_role_name]
-                current_role = roles[current_role_name]
+                for _, role in current_roles.keys():
+                    await member.remove_roles(role)
                 await member.add_roles(expected_role)
-                await member.remove_roles(current_role)
 
             leaderboard.append([uname, exp])
 
@@ -147,9 +151,22 @@ class TwitterBot(commands.Bot):
 
     async def update_invites(self, guild):
         for inv in guild.invites():
-            # TODO: set exp
-            await self.db.write('UPDATE users SET exp = $1, role = $2 WHERE uid = $3', inv.uses, inv.inviter.id)
+            user_data = self.db.fetch('SELECT * from users WHERE uid = $1', inv.inviter.id)
+            if len(user_data) > 0:
+                await self.db.write('UPDATE users SET iexp = $1 WHERE uid = $2', inv.uses, inv.inviter.id)
+            else:
+                await self.db.write('INSERT INTO users(uid, uname, iexp) VALUES($1, $2, $3)',
+                                    inv.inviter.id, inv.inviter.name, inv.uses,)
 
+    async def add_senior_exp(self, guild):
+        for user in guild.members:
+            if "Akasenior" in [r.name for r in user.roles]:
+                user_data = self.db.fetch('SELECT * from users WHERE uid = $1', user.id)
+                if len(user_data) > 0:
+                    await self.db.write('UPDATE users SET aexp = 35 WHERE uid = $1', user.id)
+                else:
+                    await self.db.write('INSERT INTO users(uid, uname, aexp) VALUES($1, $2, 35)',
+                                        user.id, user.name)
 
     async def _fetch_promos(self):
         promos = await self.db.fetch('SELECT * FROM promo')
@@ -184,11 +201,11 @@ class TwitterBot(commands.Bot):
         await self.db.write('INSERT INTO retweets(uid, code) VALUES($1, $2)', author_id, promo_code)
 
     async def add_exp(self, author_id, author_uname):
-        exp = await self.db.fetch('SELECT * FROM experience WHERE UID = $1', author_id)
+        exp = await self.db.fetch('SELECT * FROM users WHERE uid = $1', author_id)
         if exp:
-            await self.db.write('UPDATE experience SET exp = exp + 1 WHERE uid = $1', author_id)
+            await self.db.write('UPDATE users SET texp = texp + 1 WHERE uid = $1', author_id)
         else:
-            await self.db.write('INSERT INTO experience(uid, uname, exp) VALUES($1, $2, 1)', author_id, author_uname)
+            await self.db.write('INSERT INTO users(uid, uname, texp) VALUES($1, $2, 1)', author_id, author_uname)
 
     async def _is_promo_allowed(self, promo_code):
         return promo_code in self.tweet_to_promo_code.values()
@@ -300,6 +317,8 @@ class TwitterBot(commands.Bot):
 
         @self.command(name="leaderboard", pass_context=True)
         async def leaderboard(ctx):
+            return
+
             if not await self._is_admin(ctx):
                 await ctx.author.send("Admin only command!")
                 return
