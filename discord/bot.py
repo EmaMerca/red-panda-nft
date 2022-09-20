@@ -11,6 +11,8 @@ from datetime import datetime
 from verify import verify_tweet
 import math
 
+
+
 PROMO_PREFIX = "AKA"
 GUILD_ID = 1004495124451053608
 ROLES = {
@@ -38,12 +40,9 @@ WAIT_FOR_COMMENT = 60
 
 INVITES_CAP = 10
 UPDATE_ROLES_EVERY = 24 # 24 * 5 mins = 2h
-VERIFICATION_CHANNEL = 1017360549425709097
+VERIFICATION_CHANNEL = 1021124345894023278
 LEADERBOARD_CHANNEL = 1021457318300373113
-ALLOWED_CHANNELS = {
-    'twitter-verification': VERIFICATION_CHANNEL,
-    "leaderboard": LEADERBOARD_CHANNEL,
-}
+
 logging.basicConfig(filename="log.txt",
                     filemode='a',
                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
@@ -107,9 +106,9 @@ class TwitterBot(commands.Bot):
             )
             lb = []
             line = ""
-            for el in sorted_exps:
+            for i, el in enumerate(sorted_exps):
                 if len(line) < 1800:
-                    line += f"{el[0]}: {int(el[1])}exp\n"
+                    line += f"{i}. {el[0]}: {int(el[1])}exp\n"
                 else:
                     lb.append(line)
                     line = ""
@@ -164,8 +163,6 @@ class TwitterBot(commands.Bot):
 
             leaderboard.append([uname, exp])
 
-
-
         await self.get_channel(LEADERBOARD_CHANNEL).send("LEADERBOARD UPDATES \n+++\n check your rank")
         for line in format_leaderboard(leaderboard):
             await self.get_channel(LEADERBOARD_CHANNEL).send(line)
@@ -182,6 +179,7 @@ class TwitterBot(commands.Bot):
 
     async def update_users(self, guild):
         for user in guild.members:
+            if user.bot: continue
             user_data = await self.db.fetch('SELECT * from users WHERE uid = $1', user.id)
             if len(user_data) == 0:
                 await self.db.write('INSERT INTO users(uid, uname, iexp, aexp, texp) VALUES($1, $2, 0, 0, 0)',
@@ -189,6 +187,7 @@ class TwitterBot(commands.Bot):
 
     async def add_senior_exp(self, guild):
         for user in guild.members:
+            if user.bot: continue
             if "Akasenior" in [r.name for r in user.roles]:
                 user_data = await self.db.fetch('SELECT * from users WHERE uid = $1', user.id)
                 if len(user_data) > 0:
@@ -239,20 +238,6 @@ class TwitterBot(commands.Bot):
         return promo_code in self.tweet_to_promo_code.values()
 
 
-    async def is_channel_allowed(self, ctx, channels):
-
-        allowed_channels_ids = []
-        for channel in channels:
-            allowed_channels_ids.append(ALLOWED_CHANNELS[channel])
-
-        if ctx.channel.id in allowed_channels_ids:
-            return True
-
-        command = ctx.message.content.split()[0]
-        await ctx.author.send(f"The command {command} can only be used in the following channels:\n {format_output()}")
-        return False
-
-
     async def is_valid_content(self, url):
         if "/twitter.com/akajukus/" in url:
             return True
@@ -293,7 +278,8 @@ class TwitterBot(commands.Bot):
 
         @self.command(name="verify", pass_context=True)
         async def verify(ctx):
-            if not await self.is_channel_allowed(ctx, ["twitter-verification"]):
+            if VERIFICATION_CHANNEL != ctx.channel.id:
+                ctx.author.send("The command !verify can only be used in the twitter-verification channel")
                 return
             try:
                 url = ctx.message.content.split()[1]
@@ -325,7 +311,6 @@ class TwitterBot(commands.Bot):
                 return
 
             await self.add_exp(author_id, ctx.author.name)
-
             await self.update_promo(author_id, promo_code)
             await ctx.author.send(f"Tweet has been verified!")
             logger.info(f"{ctx.author.name} verified")
