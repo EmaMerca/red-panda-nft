@@ -126,9 +126,9 @@ class TwitterBot(commands.Bot):
         guild_members = {member.id: member for member in guild.members}
         members_roles = {member.id: {role.name: role for role in member.roles if role.name in EXP_ROLES.keys()}
                          for member in guild.members}
+        await self.update_users(guild)
         await self.update_invites(guild)
         await self.add_senior_exp(guild)
-        await self.update_users(guild)
 
         users = {}
         for user in await self.db.fetch('SELECT * FROM users'):
