@@ -46,7 +46,7 @@ LEADERBOARD_CHANNEL = 1021457318300373113
 logging.basicConfig(filename="log.txt",
                     filemode='a',
                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
+                    datefmt='%y-%m-%d %H:%M:%S',
                     level=logging.DEBUG)
 
 logging.info("Discord")
@@ -126,42 +126,49 @@ class TwitterBot(commands.Bot):
         guild_members = {member.id: member for member in guild.members}
         members_roles = {member.id: {role.name: role for role in member.roles if role.name in EXP_ROLES.keys()}
                          for member in guild.members}
-        await self.update_users(guild)
-        await self.update_invites(guild)
-        await self.add_senior_exp(guild)
+        try:
+            await self.update_users(guild)
+            await self.update_invites(guild)
+            await self.add_senior_exp(guild)
 
-        users = {}
-        for user in await self.db.fetch('SELECT * FROM users'):
-            iexp = e if (e := user.get("iexp")) is not None else 0
-            exp = iexp if iexp <= INVITES_CAP else INVITES_CAP
-            exp += e if (e := user.get("texp")) is not None else 0
-            exp += e if (e := user.get("aexp")) is not None else 0
-            users[user.get("uid")] = {
-                "uname": user.get("uname"),
-                "exp":  exp,
-            }
+            users = {}
+            for user in await self.db.fetch('SELECT * FROM users'):
+                iexp = e if (e := user.get("iexp")) is not None else 0
+                exp = iexp if iexp <= INVITES_CAP else INVITES_CAP
+                exp += e if (e := user.get("texp")) is not None else 0
+                exp += e if (e := user.get("aexp")) is not None else 0
+                users[user.get("uid")] = {
+                    "uname": user.get("uname"),
+                    "exp":  exp,
+                }
 
-        leaderboard = []
-        for uid, data in users.items():
-            exp = data["exp"]
-            uname = data["uname"]
-            if self.update_roles_count == 0:
-                self.update_roles_count = UPDATE_ROLES_EVERY
-                member = guild_members[uid]
-                current_roles = members_roles[uid]
-                if not (expected_role_name := get_role(exp)): continue
-                expected_role = roles[expected_role_name]
+            leaderboard = []
+            for uid, data in users.items():
+                exp = data["exp"]
+                uname = data["uname"]
+                if self.update_roles_count == 0:
+                    self.update_roles_count = UPDATE_ROLES_EVERY
+                    # sometimes the uid is not in guild memebers or memebs_roles, maybe due to edge case. This solution is just a workaround, investigate it further
+                    if uid not in guild_members or uid not in members_roles: continue
+                    member = guild_members[uid]
+                    current_roles = members_roles[uid]
+                    if not (expected_role_name := get_role(exp)): continue
+                    expected_role = roles[expected_role_name]
 
-                if len(current_roles.keys()) == 0:
-                    await member.add_roles(expected_role)
-                elif [expected_role_name] != list(current_roles.keys()):
-                    for _, role in current_roles.keys():
-                        await member.remove_roles(role)
-                    await member.add_roles(expected_role)
-            else:
-                self.update_roles_count -= 1
+                    if len(current_roles.keys()) == 0:
+                        await member.add_roles(expected_role)
+                    elif [expected_role_name] != list(current_roles.keys()):
+                        for _, role in current_roles.keys():
+                            await member.remove_roles(role)
+                        await member.add_roles(expected_role)
+                else:
+                    self.update_roles_count -= 1
 
-            leaderboard.append([uname, exp])
+                leaderboard.append([uname, exp])
+        except Exception as e:
+            logger.warning("Error during leaderboard creation")
+            logger.exception(e)
+            return
 
         await self.get_channel(LEADERBOARD_CHANNEL).send("LEADERBOARD UPDATES \n+++\n check your rank")
         for line in format_leaderboard(leaderboard):
