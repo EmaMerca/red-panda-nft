@@ -38,7 +38,7 @@ GUILD = os.getenv('DISCORD_GUILD')
 PASSW_LENGTH = 16
 WAIT_FOR_COMMENT = 60
 
-INVITES_CAP = 10
+INVITES_CAP = 15
 UPDATE_ROLES_EVERY = 24 # 24 * 5 mins = 2h
 VERIFICATION_CHANNEL = 1021124345894023278
 LEADERBOARD_CHANNEL = 1021457318300373113
@@ -94,7 +94,7 @@ class TwitterBot(commands.Bot):
             logger.error(f"Error during backup {e}")
         logger.info(f"BACKUP COMPLETE")
 
-    @tasks.loop(minutes=5)
+    @tasks.loop(minutes=60)
     async def leaderboard(self):
         def format_leaderboard(lb):
             import operator
@@ -106,7 +106,7 @@ class TwitterBot(commands.Bot):
             )
             lb = []
             line = ""
-            for i, el in enumerate(sorted_exps):
+            for i, el in enumerate(sorted_exps, start=1):
                 if len(line) < 1800:
                     line += f"{i}. {el[0]}: {int(el[1])}exp\n"
                 else:
@@ -236,12 +236,12 @@ class TwitterBot(commands.Bot):
     async def update_promo(self, author_id, promo_code):
         await self.db.write('INSERT INTO retweets(uid, code) VALUES($1, $2)', author_id, promo_code)
 
-    async def add_exp(self, author_id, author_uname):
+    async def add_exp(self, author_id, author_uname, experience=1):
         exp = await self.db.fetch('SELECT * FROM users WHERE uid = $1', author_id)
         if exp:
-            await self.db.write('UPDATE users SET texp = texp + 1 WHERE uid = $1', author_id)
+            await self.db.write('UPDATE users SET texp = texp + $1 WHERE uid = $2', experience, author_id)
         else:
-            await self.db.write('INSERT INTO users(uid, uname, texp) VALUES($1, $2, 1)', author_id, author_uname)
+            await self.db.write('INSERT INTO users(uid, uname, texp) VALUES($1, $2, $3)', author_id, author_uname, experience)
 
     async def _is_promo_allowed(self, promo_code):
         return promo_code in self.tweet_to_promo_code.values()
@@ -319,7 +319,7 @@ class TwitterBot(commands.Bot):
                                       f"commented with the wrong code or commented the wrong tweet")
                 return
 
-            await self.add_exp(author_id, ctx.author.name)
+            await self.add_exp(author_id, ctx.author.name, experience=2)
             await self.update_promo(author_id, promo_code)
             await ctx.author.send(f"Tweet has been verified!")
             logger.info(f"{ctx.author.name} verified")
