@@ -144,6 +144,8 @@ class TwitterBot(commands.Bot):
 
             leaderboard = []
             for uid, data in users.items():
+                if uid not in guild_members: continue
+
                 exp = data["exp"]
                 uname = data["uname"]
                 if self.update_roles_count == 0:
