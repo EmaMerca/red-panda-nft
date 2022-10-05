@@ -21,12 +21,12 @@ ROLES = {
 }
 
 EXP_ROLES = {
-    "Akanovice": [0, 10],
-    "Akamateur": [11, 19],
-    "Akamate": [20, 34],
-    "Akacool": [35, 49],
-    "Akaicon": [50, 59],
-    "Akaidol": [60, 200]
+    "Akanovice": [0, 4],
+    "Akamateur": [5, 14],
+    "Akamate": [15, 34],
+    "Akacool": [35, 44],
+    "Akaicon": [45, 54],
+    "Akaidol": [55, 200]
     }
 
 ADMINS = (
