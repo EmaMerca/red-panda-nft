@@ -2,6 +2,8 @@ import math
 import logging
 import os
 import secrets
+
+import pandas as pd
 from dotenv import load_dotenv
 from discord.utils import get
 from discord.ext import commands, tasks
@@ -11,7 +13,8 @@ from datetime import datetime
 from verify import verify_tweet
 import math
 
-
+WHITELIST_URL = 'https://docs.google.com/spreadsheets/d/1O4abSuPfzvo8oUbRy_yvmI9tIt2UFh-4dpLMVL1v-N0/export?format=csv&gid=0'
+WHITELIST_PATH = './whitelist.csv'
 
 PROMO_PREFIX = "AKA"
 GUILD_ID = 1004495124451053608
@@ -57,12 +60,24 @@ logger = logging.getLogger('TwitterVerification')
 class TwitterBot(commands.Bot):
     def __init__(self, command_prefix, intents, database):
         commands.Bot.__init__(self, command_prefix=command_prefix, intents=intents)
+        self.whitelist = None
         self.update_roles_count = UPDATE_ROLES_EVERY
         self._on_ready = "[INFO] Bot now online"
         self.add_commands()
         self.db = database
         self.guild_id = GUILD_ID
 
+    @tasks.loop(hours=24)
+    async def download_whitelist(self):
+        try:
+            wget = f"wget '{WHITELIST_URL}' -O '{WHITELIST_PATH}'"
+            os.system(wget)
+            wl = pd.read_csv(WHITELIST_PATH)
+            wl = wl[wl["check"] == "OK"]["address"]
+            self.whitelist = set(list(wl.values))
+            logging.info("Whitelist downloaded")
+        except Exception as e:
+            logger.error("Error during whitelist fetch", e)
 
     @tasks.loop(hours=24)
     async def dump_db(self):
@@ -216,6 +231,7 @@ class TwitterBot(commands.Bot):
         await self.db._init()
         await self._fetch_promos()
         self.leaderboard.start()
+        self.download_whitelist.start()
         self.dump_db.start()
         logger.info("BOT STARTED")
 
@@ -323,6 +339,15 @@ class TwitterBot(commands.Bot):
             await self.update_promo(author_id, promo_code)
             await ctx.author.send(f"Tweet has been verified!")
             logger.info(f"{ctx.author.name} verified")
+
+        @self.command(name="whitelist", pass_context=True)
+        async def whitelist(ctx):
+            address = ctx.message.content.split()[1]
+            message = f"Wallet {address} not in whitelist"
+            if address in self.whitelist:
+                message = f"Wallet {address} is whitelisted!"
+            await ctx.author.send(message)
+
 
 
 
