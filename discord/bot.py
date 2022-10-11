@@ -73,8 +73,7 @@ class TwitterBot(commands.Bot):
             wget = f"wget '{WHITELIST_URL}' -O '{WHITELIST_PATH}'"
             os.system(wget)
             wl = pd.read_csv(WHITELIST_PATH)
-            wl = wl[wl["check"] == "OK"]["address"]
-            self.whitelist = set(list(wl.values))
+            self.whitelist = set(list(wl["address"].values))
             logging.info("Whitelist downloaded")
         except Exception as e:
             logger.error("Error during whitelist fetch", e)
@@ -163,6 +162,8 @@ class TwitterBot(commands.Bot):
 
                 exp = data["exp"]
                 uname = data["uname"]
+                if uname in ADMINS: continue
+
                 if self.update_roles_count == 0:
                     self.update_roles_count = UPDATE_ROLES_EVERY
                     # sometimes the uid is not in guild memebers or memebs_roles, maybe due to edge case. This solution is just a workaround, investigate it further

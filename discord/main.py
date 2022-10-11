@@ -11,3 +11,6 @@ if __name__ == "__main__":
     db = Database("akajukus", "diocane96", "discord")
     bot = TwitterBot(command_prefix='!', intents=intents, database=db)
     bot.run(TOKEN)
+
+
+# wget "https://docs.google.com/spreadsheets/d/1O4abSuPfzvo8oUbRy_yvmI9tIt2UFh-4dpLMVL1v-N0/export?format=csv&gid=0" -O "whitelist.csv"
