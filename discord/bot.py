@@ -67,6 +67,18 @@ class TwitterBot(commands.Bot):
         self.db = database
         self.guild_id = GUILD_ID
 
+    @tasks.loop(hours=1000)
+    async def send_custom_message(self):
+        guild = self.get_guild(self.guild_id)
+        for user in guild.members:
+            if user.bot: continue
+            if "Akasenior" in [r.name for r in user.roles]:
+                try:
+                    await user.send("Hi Akasenior, please note that you can submit your wallet for our WL starting now by opening a support-ticket in our server. Have a nice day and stay stylish")
+                except Exception as e:
+                    logger.exception(e)
+                    continue
+
     @tasks.loop(hours=24)
     async def download_whitelist(self):
         try:
@@ -231,6 +243,7 @@ class TwitterBot(commands.Bot):
     async def on_ready(self):
         await self.db._init()
         await self._fetch_promos()
+        self.send_custom_message.start()
         self.leaderboard.start()
         self.download_whitelist.start()
         self.dump_db.start()
