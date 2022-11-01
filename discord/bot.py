@@ -188,7 +188,7 @@ class TwitterBot(commands.Bot):
                     if len(current_roles.keys()) == 0:
                         await member.add_roles(expected_role)
                     elif [expected_role_name] != list(current_roles.keys()):
-                        for _, role in current_roles.keys():
+                        for role in current_roles.keys():
                             await member.remove_roles(role)
                         await member.add_roles(expected_role)
                 else:
@@ -243,7 +243,7 @@ class TwitterBot(commands.Bot):
     async def on_ready(self):
         await self.db._init()
         await self._fetch_promos()
-        self.send_custom_message.start()
+        # self.send_custom_message.start()
         self.leaderboard.start()
         self.download_whitelist.start()
         self.dump_db.start()
